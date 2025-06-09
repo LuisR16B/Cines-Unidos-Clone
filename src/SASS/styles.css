@@ -418,10 +418,9 @@ main .section-informacion .div-descarga-app .div-descargas a {
   gap: 10px;
   color: var(--color-primario);
   background-color: var(--color-secundario);
-  padding: 20px;
+  padding: 20px 30px;
   border-radius: var(--border-radius-secundario);
   box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238);
-  width: 140px;
   transition: all 0.3s ease-out;
 }
 main .section-informacion .div-descarga-app .div-descargas a img {

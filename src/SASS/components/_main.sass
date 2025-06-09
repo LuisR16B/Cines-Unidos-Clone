@@ -204,10 +204,9 @@ main
         a
           @include flex(row, center, center, 10px)
           @include aplicar-colores(var(--color-primario), var(--color-secundario), null)
-          @include espaciado(20px, null)
+          @include espaciado(20px 30px, null)
           @include border(null, var(--border-radius-secundario))
           box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238)
-          width: 140px
           transition: all 0.3s ease-out
           img
             position: relative
