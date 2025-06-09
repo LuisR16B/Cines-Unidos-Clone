@@ -1,0 +1,31 @@
+@media only screen and (min-width: 992px)
+  nav
+    .navergacion
+      @include flex(row, center, center, 20px)
+      @include aplicar-colores(#fff, null)
+      a
+        transition: all 0.3s linear
+      a:hover
+        transform: scale(1.1)
+        span
+          width: 100%
+    .ciudades
+      @include flex(row, center, center)
+      select
+        @include aplicar-colores(#fff, #dc2626)
+        @include espaciado(6px 30px 6px 8px, 0)
+        @include border(none, 15px)
+        cursor: pointer
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>')
+        background-repeat: no-repeat
+        background-position: right 10px center
+        background-size: 16px
+        option
+          @include aplicar-colores(#000, #fff)
+      select:focus
+        outline: none
+    .div-menu
+      display: none

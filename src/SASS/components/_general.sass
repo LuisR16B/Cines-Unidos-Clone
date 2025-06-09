@@ -1,0 +1,22 @@
+@mixin aplicar-colores($color, $bg)
+  @if $color != null
+    color: $color
+  @if $bg != null
+    background-color: $bg
+
+@mixin espaciado($padding, $margin)
+  padding: $padding
+  margin: $margin
+
+@mixin flex($direccion, $justificacion, $alineacion, $gap: 0)
+  display: flex
+  flex-direction: $direccion
+  justify-content: $justificacion
+  align-items: $alineacion
+  gap: $gap
+
+@mixin border($border, $border-radius)
+  @if $border != null
+    border: $border
+  @if $border-radius != null
+    border-radius: $border-radius

@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cines Unidos Rediseño</title>
+    <link rel="stylesheet" href="./src/SASS/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div>
+        <img width="200px" src="https://www.cinesunidos.com/logo/complete-logo-red.png" alt="logo"/>
+      </div>
+      <div class="navergacion">
+        <a href="#">Inicial</a>
+        <a href="#cartelera">Cartelera</a>
+        <a href="#preventa">Preventa</a>
+        <a href="#proximos-estrenos">Proximos estrenos</a>
+        <a href="#promociones">Promociones</a>
+      </div>
+      <div class="ciudades">
+        <select name="Ciudad" id="Ciudad">
+          <option value="Ciudad">Caracas</option>
+          <option value="Ciudad">Barquisimeto</option>
+          <option value="Ciudad">Maturin</option>
+          <option value="Ciudad">Maracay</option>
+          <option value="Ciudad">San Cristobal</option>
+        </select>
+      </div>
+      <div class="div-menu">
+        <button class="btn-menu">
+          <img src="./src/img/icon/btn-menu.svg" alt="menu">
+        </button>
+      </div>
+    </nav>
+    <main>
+      <header>
+        <img width="100%" src="./src/img/banner-liloystitch.jpg" alt="banner">
+        <div class="div-detalles-banner">
+          <p>
+            La conmovedora y divertidísima historia de una solitaria niña hawaiana y el extraterrestre fugitivo que la ayuda a reparar su desestructurada familia.
+          </p>
+          <div>
+            <span>11:25</span>
+            <span>12:55</span>
+            <span>14:25</span>
+            <span>16:25</span>
+            <span>+7 mas</span>
+          </div>
+        </div>
+        <div class="div-btn-banner">
+          <button class="btn-comprar">Comprar Boletos</button>
+          <button class="btn-trailer">Ver Trailer</button>
+        </div>
+      </header>
+      <section class="section-acceso-rapido">
+        <div class="div-titulo">
+          <h2>Acceso Rapido</h2>
+          <p>Descubre todo lo que Cines Unidos tiene para ofrecerte</p>
+        </div>
+        <div class="div-tarjetas-acceso">
+          <div class="card-acceso cines">
+            <img class="fondo-card-acceso" src="https://i.blogs.es/aa91a3/cine-/1366_2000.jpg" alt="fondo-cine">
+            <div>
+              <img src="./src/img/icon/cines.svg" alt="cines">
+              <h3>Cines</h3>
+              <p>Nuestras ubicaciones</p>
+            </div>
+          </div>
+          <div class="card-acceso cartelera">
+            <img class="fondo-card-acceso" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZzg18i4LXjR23A-1ewjtgHllw2PbFvTGjIg&s" alt="fondo-cine">
+            <div>
+              <img src="./src/img/icon/cartelera.svg" alt="cines">
+              <h3>Cartelera</h3>
+              <p>Peliculas en cartelera</p>
+            </div>
+          </div>
+          <div class="card-acceso carameleria">
+            <img class="fondo-card-acceso" src="https://media.glamour.mx/photos/6190af22f5ed039ceea89892/master/w_1600%2Cc_limit/169693.jpg" alt="fondo-cine">
+            <div>
+              <img src="./src/img/icon/carameleria.svg" alt="cines">
+              <h3>Carameleria</h3>
+              <p>Snacks y bebidas</p>
+            </div>
+          </div>
+          <div class="card-acceso preventas">
+            <img class="fondo-card-acceso" src="https://i.blogs.es/aa91a3/cine-/1366_2000.jpg" alt="fondo-cine">
+            <div>
+              <img src="./src/img/icon/preventa.svg" alt="cines">
+              <h3>Preventa</h3>
+              <p>Proximos estrenos</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="cartelera" class="section-cartelera">
+        <div class="div-titulo">
+          <h2>Cartelera</h2>
+          <p>Descubre las mejores peliculas en nuestros cines</p>
+        </div>
+        <div class="div-btn-categorias">
+          <button>
+            <img src="./src/img/icon/flecha-left.svg" alt="flecha left">
+          </button>
+          <div class="btn-categorias no-scrollbar">
+            <button class="btn-seleccionado">Todos</button>
+            <button>Accion</button>
+            <button>Ciencia Ficcion</button>
+            <button>Drama</button>
+            <button>Comedia</button>
+            <button>Terror</button>
+            <button>Aventura</button>
+            <button>Fantasía</button>
+            <button>Romance</button>
+            <button>Suspenso</button>
+            <button>Animación</button>
+            <button>Documental</button>
+          </div>
+          <button>
+            <img src="./src/img/icon/flecha-right.svg" alt="flecha right">
+          </button>
+        </div>
+        <div class="div-categorias">
+          <button>
+            <img src="./src/img/icon/flecha-left.svg" alt="flecha left">
+          </button>
+          <div class="div-card-categorias no-scrollbar">
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div class="div-card-banner">
+                  <img width="100%" src="./src/img/carteleras/bambi.jpg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>Bambi: Una Aventura en el Bosque</h4>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>78 min</p>
+                  </div>
+                  <div class="card-horarios">
+                    <span>14:45</span>
+                    <span>17:00</span>
+                    <span>19:10</span>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>Bambi: Una Aventura en el Bosque</h4>
+                <p>
+                  Un cervatillo crece junto a su madre en el bosque, donde aprende y hace amigos. Tras una tragedia, su padre lo guía para enfrentar los peligros de la vida mientras se convierte en un ciervo adulto.
+                </p>
+                <button>Comprar Entradas</button>
+              </div>
+            </div>
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div>
+                  <img width="100%" src="./src/img/carteleras/liloystitch.jpg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>Lilo y Stitch</h4>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>108 min</p>
+                  </div>
+                  <div class="card-horarios">
+                    <span>13:55</span>
+                    <span>14:25</span>
+                    <span>+14 mas</span>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>Lilo y Stitch</h4>
+                <p>
+                  La conmovedora y divertidísima historia de una solitaria niña hawaiana y el extraterrestre fugitivo que la ayuda a reparar su desestructurada familia.
+                </p>
+                <button>Comprar Entradas</button>
+              </div>
+            </div>
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div>
+                  <img width="100%" src="./src/img/carteleras/kueka.jpg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>Kueka: Memoria Ancestral</h4>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>74 min</p>
+                  </div>
+                  <div class="card-horarios">
+                    <span>17:15</span>
+                    <span>19:30</span>
+                    <span>+3 mas</span>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>Kueka: Memoria Ancestral</h4>
+                <p>
+                  El pueblo Pemón, en el sur de Venezuela, lucha por recuperar Kowai Kueka, una piedra sagrada de jaspe rojo que encarna a su abuela ancestral. Robada y exhibida en un parque de Berlín sin consentimiento, su ausencia ha desatado caos ambiental (inundaciones, sequías) y espiritual. Tres generaciones de sabios Pemón exigen su devolución para restaurar el equilibrio entre la naturaleza y su cultura, desafiando el colonialismo y el olvido.
+                </p>
+                <button>Comprar Entradas</button>
+              </div>
+            </div>
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div>
+                  <img width="100%" src="./src/img/carteleras/mision-imposible.jpg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>Mision Imposible: La Sentencia Final</h4>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>169 min</p>
+                  </div>
+                  <div class="card-horarios">
+                    <span>17:40</span>
+                    <span>21:10</span>
+                    <span>+5 mas</span>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>Mision Imposible: La Sentencia Final</h4>
+                <p>
+                  Ethan Hunt regresa al cine con nuevas aventuras tras lo sucedido en Misión Imposible: 7. El agente deberá enfrentarse a los nuevos peligros que amenazan a él y al resto de su equipo.
+                </p>
+                <button>Comprar Entradas</button>
+              </div>
+            </div>
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div>
+                  <img width="100%" src="./src/img/carteleras/destino-final.jpg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>Destino Final: Lazos de Sangre</h4>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>110 min</p>
+                  </div>
+                  <div class="card-horarios">
+                    <span>17:30</span>
+                    <span>20:00</span>
+                    <span>+2 mas</span>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>Destino Final: Lazos de Sangre</h4>
+                <p>
+                  Atormentada por una pesadilla violenta recurrente, una estudiante universitaria regresa a casa para encontrar a la única persona que puede romper el ciclo y salvar a su familia del horrible destino que inevitablemente les espera.
+                </p>
+                <button>Comprar Entradas</button>
+              </div>
+            </div>
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div>
+                  <img width="100%" src="./src/img/carteleras/bailarina.jpg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>Bailarina</h4>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>125 min</p>
+                  </div>
+                  <div class="card-horarios">
+                    <span>18:40</span>
+                    <span>21:40</span>
+                    <span>+2 mas</span>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>Bailarina</h4>
+                <p>
+                  Una asesina entrenada en las tradiciones de la organización Ruska Roma se propone buscar venganza tras la muerte de su padre.
+                </p>
+                <button>Comprar Entradas</button>
+              </div>
+            </div>
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div>
+                  <img width="100%" src="./src/img/carteleras/noloescuches.jpg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>No Lo Escuches</h4>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>101 min</p>
+                  </div>
+                  <div class="card-horarios">
+                    <span>16:00</span>
+                    <span>18:15</span>
+                    <span>+2 mas</span>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>No Lo Escuches</h4>
+                <p>
+                  A principios de los 90 un grupo de chicos escapa de la rutina diaria y toma la carretera rumbo a una divertida escapada de fin de semana. Anthony y sus compañeros llegan a un abandonado conjunto residencial para disfrutar a lo grande. Sin embargo, la noche se torna muy oscura y un ente desconocido invade por completo el ambiente e influye en el comportamiento de los chicos. Algunos cometen actos en contra de ellos mismos y de quienes los rodean, desatando esa noche un sinfín de acontecimientos inexplicables llenos de mucha sangre y terror.
+                </p>
+                <button>Comprar Entradas</button>
+              </div>
+            </div>
+          </div>
+          <button>
+            <img src="./src/img/icon/flecha-right.svg" alt="flecha right">
+          </button>
+        </div>
+        <div class="div-ver-mas">
+          <button class="btn-ver-mas">Ver Todas las Carteleras</button>
+        </div>
+      </section>
+      <section id="preventa" class="section-preventa">
+        <div class="div-titulo">
+          <h2>Preventa</h2>
+          <p>Asegura tu lugar para los próximos estrenos más esperados</p>
+        </div>
+        <div class="div-categorias">
+          <button>
+            <img src="./src/img/icon/flecha-left.svg" alt="flecha left">
+          </button>
+          <div class="div-card-categorias no-scrollbar">
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div class="div-card-banner">
+                  <img width="100%" src="./src/img/preventas/como-entrenar-a-tu-dragon.jpeg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>Como Entrenar a tu Dragon</h4>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>125 min</p>
+                  </div>
+                  <div class="div-estreno">
+                    <img width="15px" src="./src/img/icon/cartelera.svg" alt="estreno">
+                    <p>Estreno: 10 jun 2025</p>
+                  </div>
+                  <div class="div-fecha-preventa">
+                    <p>Preventa desde: 1 jun 2025</p>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>Como Entrenar a tu Dragon</h4>
+                <p>
+                  Un joven vikingo aspira a cazar dragones, pero se convierte inesperadamente en amigo de un joven dragón.
+                </p>
+                <button>Comprar Preventa</button>
+              </div>
+            </div>
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div class="div-card-banner">
+                  <img width="100%" src="./src/img/preventas/catastrofe-en-el-aire.jpeg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>Catastrofe en el Aire</h4>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>119 min</p>
+                  </div>
+                  <div class="div-estreno">
+                    <img width="15px" src="./src/img/icon/cartelera.svg" alt="estreno">
+                    <p>Estreno: 07 ago 2025</p>
+                  </div>
+                  <div class="div-fecha-preventa">
+                    <p>Preventa desde: 1 ago 2025</p>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>Catastrofe en el Aire</h4>
+                <p>
+                  Gao Haojun, un experto en seguridad internacional, es secuestrado por hombres armados en el primer vuelo del avión A380, y su hija ciega es una de las rehenes encubiertas, un hecho que él desconoce.
+                </p>
+                <button>Comprar Preventa</button>
+              </div>
+            </div>
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div class="div-card-banner">
+                  <img width="100%" src="./src/img/preventas/los-4-fantasticos.jpeg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>Los 4 Fantasticos: Primeros Pasos</h4>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>120 min</p>
+                  </div>
+                  <div class="div-estreno">
+                    <img width="15px" src="./src/img/icon/cartelera.svg" alt="estreno">
+                    <p>Estreno: 18 jul 2025</p>
+                  </div>
+                  <div class="div-fecha-preventa">
+                    <p>Preventa desde: 24 jul 2025</p>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>Los 4 Fantasticos: Primeros Pasos</h4>
+                <p>
+                  Con un estruendoso trasfondo en un mundo retrofuturista inspirado en los años 60, la Primera Familia de Marvel enfrenta su desafío más intimidante hasta ahora. Obligados a equilibrar sus roles como héroes con la fuerza de su vínculo familiar, deben defender la Tierra de un voraz dios espacial llamado Galactus y su enigmático heraldo, Silver Surfer.
+                </p>
+                <button>Comprar Preventa</button>
+              </div>
+            </div>
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div class="div-card-banner">
+                  <img width="100%" src="./src/img/preventas/otro-viernes-de-locos.jpeg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>Otro Viernes de Locos</h4>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>120 min</p>
+                  </div>
+                  <div class="div-estreno">
+                    <img width="15px" src="./src/img/icon/cartelera.svg" alt="estreno">
+                    <p>Estreno: 07 ago 2025</p>
+                  </div>
+                  <div class="div-fecha-preventa">
+                    <p>Preventa desde: 1 ago 2025</p>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>Otro Viernes de Locos</h4>
+                <p>
+                  Años después de que Tess y Anna atravesaran una crisis de identidad, Anna ahora tiene una hija y una futura hijastra. Mientras enfrentan los innumerables desafíos que surgen cuando dos familias se fusionan, Tess y Anna descubren que un rayo puede caer dos veces.
+                </p>
+                <button>Comprar Preventa</button>
+              </div>
+            </div>
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div class="div-card-banner">
+                  <img width="100%" src="./src/img/preventas/las-2-caras.jpeg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>Las Dos Caras</h4>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>100 min</p>
+                  </div>
+                  <div class="div-estreno">
+                    <img width="15px" src="./src/img/icon/cartelera.svg" alt="estreno">
+                    <p>Estreno: 19 jun 2025</p>
+                  </div>
+                  <div class="div-fecha-preventa">
+                    <p>Preventa desde: 12 jun 2025</p>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>Las Dos Caras</h4>
+                <p>
+                  Dos personajes son marcados por la cruda realidad de la vida. Uno, perdió trágicamente a su madre siendo un niño; fue criado por su padre adoptivo al que también pierde. La soledad y la venganza lo llevan a tomar el poder del barrio. El otro, es un joven que vive en la calle, víctima del abandono de una madre que no le atiende. Este joven es rechazado por todo el entorno que lo rodea. Así, cae en las manos del primero, siendo manipulado para cometer actos no positivos para su vida.
+                </p>
+                <button>Comprar Preventa</button>
+              </div>
+            </div>
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div class="div-card-banner">
+                  <img width="100%" src="./src/img/preventas/puente-en-llamas.jpeg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>Puente en Llamas</h4>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>97 min</p>
+                  </div>
+                  <div class="div-estreno">
+                    <img width="15px" src="./src/img/icon/cartelera.svg" alt="estreno">
+                    <p>Estreno: 10 jul 2025</p>
+                  </div>
+                  <div class="div-fecha-preventa">
+                    <p>Preventa desde: 1 jul 2025</p>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>Puente en Llamas</h4>
+                <p>
+                  Un veterano de guerra, afectado por un trastorno de estrés postraumático, se ve atrapado sin querer con su hermana adolescente en el puente Tobin Memorial de Boston mientras un grupo de ex militares revolucionarios fuertemente armados toman a todos como rehenes.
+                </p>
+                <button>Comprar Preventa</button>
+              </div>
+            </div>
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div class="div-card-banner">
+                  <img width="100%" src="./src/img/preventas/jurassic-world.jpeg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>Jurassic World: Renace</h4>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>100 min</p>
+                  </div>
+                  <div class="div-estreno">
+                    <img width="15px" src="./src/img/icon/cartelera.svg" alt="estreno">
+                    <p>Estreno: 03 jul 2025</p>
+                  </div>
+                  <div class="div-fecha-preventa">
+                    <p>Preventa desde: 25 jun 2025</p>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>Jurassic World: Renace</h4>
+                <p>
+                  Cinco años después de los eventos de "Dominion", sigue a Zora (Scarlett Johansson), que dirige un equipo para conseguir material genético de tres enormes dinosaurios. Cuando la operación se cruza con una familia, quedan varados en una isla donde hacen un siniestro descubrimiento.
+                </p>
+                <button>Comprar Preventa</button>
+              </div>
+            </div>
+          </div>
+          <button>
+            <img src="./src/img/icon/flecha-right.svg" alt="flecha right">
+          </button>
+        </div>
+        <div class="div-mas-preventas">
+          <button class="btn-ver-preventas">Ver Todas las Preventas</button>
+        </div>
+      </section>
+      <section id="proximos-estrenos" class="section-estrenos">
+        <div class="div-titulo">
+          <h2>Proximos Estrenos</h2>
+          <p>No te pierdas las próximas aventuras cinematográficas</p>
+        </div>
+        <div class="div-categorias">
+          <button>
+            <img src="./src/img/icon/flecha-left.svg" alt="flecha left">
+          </button>
+          <div class="div-card-categorias no-scrollbar">
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div class="div-card-banner">
+                  <img width="100%" src="./src/img/proximos-estrenos/elio.jpg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>Elio</h4>
+                  <div class="div-estreno">
+                    <img width="15px" src="./src/img/icon/cartelera.svg" alt="estreno">
+                    <p>Estreno: 19 jun 2025</p>
+                  </div>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>100 min</p>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>Elio</h4>
+                <p>
+                  Cuenta la historia de Elio, un niño de 11 años, que lucha por encajar hasta que de repente es transportado por extraterrestres y es elegido para ser el embajador galáctico de la Tierra.
+                </p>
+                <button>Mas Informacion</button>
+              </div>
+            </div>
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div class="div-card-banner">
+                  <img width="100%" src="./src/img/proximos-estrenos/venecos.jpg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>Venecos</h4>
+                  <div class="div-estreno">
+                    <img width="15px" src="./src/img/icon/cartelera.svg" alt="estreno">
+                    <p>Estreno: 19 jun 2025</p>
+                  </div>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>90 min</p>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>Venecos</h4>
+                <p>
+                  Yumeri, una joven venezolana, viaja con su pareja y un niño a Chile buscando oportunidades. A pesar de sus esperanzas, se enfrenta a la xenofobia y la falta de empleo, transformando su sueño en una dura lucha por la supervivencia. Guiada por el bienestar del niño, Yumeri deberá encontrar la fuerza para tomar una decisión crucial. Su historia es un testimonio de valentía y resiliencia ante la adversidad.
+                </p>
+                <button>Mas Informacion</button>
+              </div>
+            </div>
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div class="div-card-banner">
+                  <img width="100%" src="./src/img/proximos-estrenos/tiburon-blanco.jpg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>Tiburon Blanco: Ataque Final</h4>
+                  <div class="div-estreno">
+                    <img width="15px" src="./src/img/icon/cartelera.svg" alt="estreno">
+                    <p>Estreno: 26 jun 2025</p>
+                  </div>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>96 min</p>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>Tiburon Blanco: Ataque Final</h4>
+                <p>
+                  Viejos amigos universitarios se reúnen para bucear en el Caribe, explorando un naufragio de la Segunda Guerra Mundial, pero quedan atrapados en su laberinto de metal oxidado, rodeados de grandes tiburones blancos.
+                </p>
+                <button>Mas Informacion</button>
+              </div>
+            </div>
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div class="div-card-banner">
+                  <img width="100%" src="./src/img/proximos-estrenos/no-voltees.jpg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>No Voltees</h4>
+                  <div class="div-estreno">
+                    <img width="15px" src="./src/img/icon/cartelera.svg" alt="estreno">
+                    <p>Estreno: 19 jun 2025</p>
+                  </div>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>94 min</p>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>No Voltees</h4>
+                <p>
+                  Cuando dos hermanos regresan a la casa donde crecieron para cuidar a su madre enferma, despiertan una presencia sobrenatural y violenta que habita en sus peores traumas. Atrapados entre la culpa y los secretos familiares, deberán enfrentarse al horror de su pasado o ser devorados por él.
+                </p>
+                <button>Mas Informacion</button>
+              </div>
+            </div>
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div class="div-card-banner">
+                  <img width="100%" src="./src/img/proximos-estrenos/pitufos.jpg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>PITUFOS</h4>
+                  <div class="div-estreno">
+                    <img width="15px" src="./src/img/icon/cartelera.svg" alt="estreno">
+                    <p>Estreno: 17 jul 2025</p>
+                  </div>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>100 min</p>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>PITUFOS</h4>
+                <p>
+                  Cuando Papa Pitufo es tomado por los malvados magos Razamel y Gargamel, Pitufina lleva a los Pitufos en una misión al mundo real para salvarlo
+                </p>
+                <button>Mas Informacion</button>
+              </div>
+            </div>
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div class="div-card-banner">
+                  <img width="100%" src="./src/img/proximos-estrenos/superman.jpg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>Superman</h4>
+                  <div class="div-estreno">
+                    <img width="15px" src="./src/img/icon/cartelera.svg" alt="estreno">
+                    <p>Estreno: 10 jul 2025</p>
+                  </div>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>120 min</p>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>Superman</h4>
+                <p>
+                  Súperman en sus primeros años siendo superhéroe, pelea por sus ideales en un mundo que ve a la verdad, la justicia y la bondad como conceptos anticuados.
+                </p>
+                <button>Mas Informacion</button>
+              </div>
+            </div>
+            <div class="card-cartelera">
+              <div class="card-filtro-hover">
+                <div class="div-card-banner">
+                  <img width="100%" src="./src/img/proximos-estrenos/megan.jpg" alt="">
+                </div>
+                <div class="div-card-bottom">
+                  <h4>M3gan 2.0</h4>
+                  <div class="div-estreno">
+                    <img width="15px" src="./src/img/icon/cartelera.svg" alt="estreno">
+                    <p>Estreno: 26 jun 2025</p>
+                  </div>
+                  <div class="card-duracion">
+                    <img width="15px" src="./src/img/icon/reloj.svg" alt="reloj icon">
+                    <p>100 min</p>
+                  </div>
+                </div>
+              </div>
+              <div class="div-card-categoria-hover">
+                <h4>M3gan 2.0</h4>
+                <p>
+                  Secuela de 'M3GAN' (2023). Con el futuro de la existencia humana en juego, Gemma se da cuenta de que la única opción es resucitar a M3GAN y darle unas cuantas mejoras, haciéndola más rápida, más fuerte y más letal.
+                </p>
+                <button>Mas Informacion</button>
+              </div>
+            </div>
+          </div>
+          <button>
+            <img src="./src/img/icon/flecha-right.svg" alt="flecha right">
+          </button>
+        </div>
+        <div class="div-mas-estrenos">
+          <button class="btn-ver-estrenos">Ver Todas las Preventas</button>
+        </div>
+      </section>
+      <section id="promociones" class="section-promociones">
+        <div class="div-titulo">
+          <h2>Promociones y Precios</h2>
+          <p>Aprovecha nuestras ofertas especiales y disfruta más por menos</p>
+        </div>
+        <div class="div-card-promos">
+          <div class="card-promos lunes-popular">
+            <div class="circulo-derecho"></div>
+            <div class="circulo-izquierda"></div>
+            <div class="descuentos">
+              <span>50%</span>
+            </div>
+            <div class="titulo-info-promo">
+              <h4>Lunes Popular</h4>
+              <p>50% de descuento en tus boletos todos los lunes</p>
+            </div>
+            <div class="ver-detalles">
+              <p>Valido: Todos los lunes</p>
+              <button>Ver Detalles</button>
+            </div>
+          </div>
+          <div class="card-promos estudiantes">
+            <div class="circulo-derecho"></div>
+            <div class="circulo-izquierda"></div>
+            <div class="descuentos">
+              <span>25%</span>
+            </div>
+            <div class="titulo-info-promo">
+              <h4>Estudiantes</h4>
+              <p>Presentando tu carnet, de martes a viernes, disfrutas 25% de descuento en boletos</p>
+            </div>
+            <div class="ver-detalles">
+              <p>Valido: De martes a viernes</p>
+              <button>Ver Detalles</button>
+            </div>
+          </div>
+          <div class="card-promos miercoles-para-ti">
+            <div class="circulo-derecho"></div>
+            <div class="circulo-izquierda"></div>
+            <div class="descuentos">
+              <span>20%</span>
+            </div>
+            <div class="titulo-info-promo">
+              <h4>Miércoles para ti</h4>
+              <p>20% de descuento en boletos todos los miércoles</p>
+            </div>
+            <div class="ver-detalles">
+              <p>Valido: Todos los miercoles</p>
+              <button>Ver Detalles</button>
+            </div>
+          </div>
+          <div class="card-promos adulto-mayor">
+            <div class="circulo-derecho"></div>
+            <div class="circulo-izquierda"></div>
+            <div class="descuentos">
+              <span>50%</span>
+            </div>
+            <div class="titulo-info-promo">
+              <h4>Adulto Mayor de 60 años</h4>
+              <p>50% de descuento en boletos y en todas las funciones</p>
+            </div>
+            <div class="ver-detalles">
+              <p>Valido: Todos los dias</p>
+              <button>Ver Detalles</button>
+            </div>
+          </div>
+        </div>
+        <div class="div-ver-mas">
+          <button class="btn-ver-mas">Ver Todas las Carteleras</button>
+        </div>
+      </section>
+      <section class="section-informacion">
+        <div class="div-descarga-app">
+          <div class="div-titulo">
+            <h2>Descarga Nuestra App</h2>
+            <p>Disfruta de la mejor experiencia cinematográfica desde tu móvil</p>
+          </div>
+          <div class="div-descargas">
+            <a href="#">
+              <img src="./src/img/icon/descarga.svg" alt="descarga">
+              <div>
+                <p class="descarga-en">Descargar en</p>
+                <p class="descarga-store">App Store</p>
+              </div>
+            </a>
+            <a href="#">
+              <img src="./src/img/icon/descarga.svg" alt="descarga">
+              <div>
+                <p class="descarga-en">Descargar en</p>
+                <p class="descarga-store">Google Play</p>
+              </div>
+            </a>
+          </div>
+          <ul class="lista-descarga-info">
+            <li>Compra boletos desde tu celular</li>
+            <li>Recibe notificaciones de estrenos</li>
+            <li>Acceso a promociones exclusivas</li>
+          </ul>
+        </div>
+        <div class="div-suscribirse">
+          <div class="div-titulo">
+            <h2>No Te Pierdas Las Mejores Ofertas</h2>
+            <p>Suscríbete a nuestro newsletter y recibe promociones exclusivas, estrenos y eventos especiales</p>
+          </div>
+          <div class="div-suscribete-aqui">
+            <input type="email" placeholder="Tu correo electronico">
+            <button>Suscribirse</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="section-top">
+        <div class="div-logo">
+          <img src="https://stcinesunidoswebshared.blob.core.windows.net/img/logo-white.png" alt="logo">
+          <p>Disfruta de la mejor experiencia cinematográfica</p>
+        </div>
+        <div class="div-navegacion">
+          <div>
+            <h4>Navegacion</h4>
+            <ul>
+              <li>Inicio</li>
+              <li>Cartelera</li>
+              <li>Cines</li>
+              <li>Carameleria</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Servicios</h4>
+            <ul>
+              <li>Proximos Estrenos</li>
+              <li>Preventa</li>
+              <li>Promociones y Precios</li>
+              <li>Cines Unidos Club</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Informacion</h4>
+            <ul>
+              <li>Comercializacion</li>
+              <li>Contacto</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section-descarga">
+        <div class="titulo-descarga">
+          <h4>Descarga nuestra app</h4>
+          <p>Compra tus boletos desde tu celular</p>
+        </div>
+        <div class="btn-descarga-footer">
+          <a href="#">
+            <p class="descarga">Descarga en</p>
+            <p class="tienda">App Store</p>
+          </a>
+          <a href="#">
+            <p class="descarga">Descarga en</p>
+            <p>Google Play</p>
+          </a>
+        </div>
+      </section>
+      <section class="section-terminos">
+        <div class="div-terminos">
+          <p>©2015. Todos los derechos reservados. Compañía Anónima Empresa Cines Unidos. RIF:J-xxxxxxxx-x</p>
+          <a href="#">Términos y Condiciones</a>
+        </div>
+        <div class="redes">
+          <img width="30px" src="./src/img/icon/facebook.svg" alt="fb">
+          <img width="30px" src="./src/img/icon/tiktok.svg" alt="tiktok">
+          <img width="30px" src="./src/img/icon/instagram.svg" alt="ig">
+          <img width="30px" src="./src/img/icon/x.svg" alt="x">
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+@media only screen and (min-width: 600px)
+  main
+    .section-acceso-rapido
+      .div-tarjetas-acceso
+        grid-template-columns: repeat(2, 1fr)
+    .section-informacion
+      .div-descarga-app
+        .div-descargas
+          @include flex(row, center, center, 30px)
+      .div-suscribirse
+        .div-suscribete-aqui
+          @include flex(row, center, center, 20px)
+          button
+            padding: 16px 80px
+    .section-promociones
+      .div-card-promos
+        grid-template-columns: repeat(2, 1fr)
+
+@media only screen and (min-width: 992px)
+  main
+    .section-acceso-rapido
+      .div-tarjetas-acceso
+        grid-template-columns: repeat(4, 1fr)
+    .div-categorias
+      .div-card-categorias
+        .card-cartelera
+          width: 250px
+    .section-promociones
+      .div-card-promos
+        grid-template-columns: repeat(4, 1fr)

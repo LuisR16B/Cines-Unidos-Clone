@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap')
+@import "./components/_general"
+@import "./components/_nav"
+@import "./components/_header"
+@import "./components/_main"
+@import "./components/_footer"
+@import "./components/responsive/_navresponsive"
+@import "./components/responsive/_headerresponsive"
+@import "./components/responsive/_mainresponsive"
+@import "./components/responsive/_footerresponsive"
+
+*
+  padding: 0
+  margin: 0
+  font-family: "Outfit", sans-serif
+
+body
+  background: linear-gradient(to bottom, #111827, #0f172a)
+
+::-webkit-scrollbar
+  width: 8px
+  background: linear-gradient(120deg, #111827, #0f172a)
+
+::-webkit-scrollbar-thumb
+  background-color: #9b2352
+  border-radius: 5px
+
+button
+  border: none
+  background-color: transparent
+  cursor: pointer
+
+a
+  text-decoration: none
+  color: inherit
+  cursor: pointer
+
+.no-scrollbar::-webkit-scrollbar
+  display: none
+
+.no-scrollbar
+  scrollbar-width: none
