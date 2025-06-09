@@ -2,7 +2,7 @@
   nav
     .navergacion
       @include flex(row, center, center, 20px)
-      @include aplicar-colores(#fff, null, null)
+      @include aplicar-colores(var(--color-primario), null, null)
       a
         transition: all 0.3s linear
       a:hover
@@ -12,7 +12,7 @@
     .ciudades
       @include flex(row, center, center)
       select
-        @include aplicar-colores(#fff, #dc2626, null)
+        @include aplicar-colores(var(--color-primario), #c62828, null)
         @include espaciado(6px 30px 6px 8px, null)
         @include border(none, 15px)
         cursor: pointer
@@ -24,7 +24,7 @@
         background-position: right 10px center
         background-size: 16px
         option
-          @include aplicar-colores(#000, #fff, null)
+          @include aplicar-colores(var(--color-secundario), var(--color-primario), null)
       select:focus
         outline: none
     .div-menu

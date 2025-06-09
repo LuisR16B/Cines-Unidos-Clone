@@ -1,21 +1,19 @@
 main
-  .section-cartelera, .section-preventa, .section-estrenos, .section-promociones
+  .section-acceso-rapido, .section-cartelera, .section-preventa, .section-estrenos, .section-promociones
     @include espaciado(70px 30px 0 30px, null)
     @include flex(column, null, null, 30px)
-    @include aplicar-colores(#fff, null, null)
+    @include aplicar-colores(var(--color-primario), null, null)
   .section-acceso-rapido
-    @include espaciado(30px, null)
     @include flex(column, center, center, 30px)
-    @include aplicar-colores(#fff, null, null)
     .div-tarjetas-acceso
       @include grid(null, 1fr, 1fr, center, 30px)
       width: 100%
       .card-acceso
         @include flex(row, center, center)
-        @include border(null, 10px)
+        @include border(null, var(--border-radius-secundario))
         position: relative
         overflow: hidden
-        transition: all 0.3s ease-in-out
+        transition: all 0.5s ease-in-out
         cursor: pointer
         .fondo-card-acceso
           object-fit: cover
@@ -29,18 +27,21 @@ main
             @include aplicar-colores(#D1D5DB, null, null)
             font-size: 0.8rem
       .card-acceso:hover
-        transform: scale(1.1)
+        transform: scale(1.1) rotate(2deg)
         .fondo-card-acceso
           transition: all 0.9s ease-in-out
           filter: opacity(0.5)
+        div
+          img
+            animation: saltoaccesorapido 1s infinite alternate ease-in-out
       .cines
-        @include aplicar-colores(null, null, linear-gradient(60deg, #c6282867, #7f000067))
+        @include aplicar-colores(null, null, linear-gradient(to right, #c6282867, #7f000067))
       .cartelera
-        @include aplicar-colores(null, null, linear-gradient(60deg, #1976D267, #0D47A167))
+        @include aplicar-colores(null, null, linear-gradient(to right, #1976D267, #0D47A167))
       .carameleria
-        @include aplicar-colores(null, null, linear-gradient(60deg, #FFC10767, #FF8F0067))
+        @include aplicar-colores(null, null, linear-gradient(to right, #FFC10767, #FF8F0067))
       .preventas
-        @include aplicar-colores(null, null, linear-gradient(60deg, #FB8C0067, #E6510067))
+        @include aplicar-colores(null, null, linear-gradient(to right, #FB8C0067, #E6510067))
   .section-cartelera
     .div-btn-categorias
       @include flex(row, null, null, 10px)
@@ -52,12 +53,12 @@ main
         width: 100%
         button
           @include espaciado(10px 25px, null)
-          @include aplicar-colores(#fff, #1f293780, null)
-          @include border(null, 20px)
+          @include aplicar-colores(var(--color-primario), #1f293780, null)
+          @include border(null, var(--border-radius-primario))
           white-space: nowrap
           font-weight: bold
         .btn-seleccionado
-          @include aplicar-colores(null, null, linear-gradient(to right, #c62828, #7f0000))
+          @include aplicar-colores(null, null, var(--gradiente-rojo))
         button:hover
           @include aplicar-colores(null, #262f3e, null)
     .div-categorias
@@ -70,19 +71,19 @@ main
                 span
                   @include espaciado(4px 8px, null)
                   @include aplicar-colores(null, #4b55636c, null)
-                  @include border(null, 10px)
+                  @include border(null, var(--border-radius-secundario))
                   font-size: 0.7rem
         .div-card-categoria-hover
           button
-            @include aplicar-colores(null, null, linear-gradient(to right, #c62828, #7f0000))
+            @include aplicar-colores(null, null, var(--gradiente-rojo))
             font-weight: bold
           button:hover
-            @include aplicar-colores(null, null, linear-gradient(to right, #c62828e4, #7f0000e4))
+            @include aplicar-colores(null, null, var(--gradiente-rojo-transparente))
         .card-cartelera:hover
           box-shadow: 0px 0px 10px #ff7b7bb4
     .div-ver-mas
       .btn-ver-mas
-        @include aplicar-colores(null, null, linear-gradient(to right, #c62828, #7f0000))
+        @include aplicar-colores(null, null, var(--gradiente-rojo))
   .section-preventa
     .div-categorias
       .div-card-categorias
@@ -97,16 +98,16 @@ main
                 font-size: 0.9rem
         .div-card-categoria-hover
           button
-            @include aplicar-colores(#000, null, linear-gradient(60deg, #FFC107, #FF8F00))
+            @include aplicar-colores(var(--color-secundario), null, var(--gradiente-amarillo))
             font-weight: bold
           button:hover
-            @include aplicar-colores(null, null, linear-gradient(60deg, #FFC107e4, #FF8F00e4))
+            @include aplicar-colores(null, null, var(--gradiente-amarillo-transparente))
         .card-cartelera:hover
           box-shadow: 0px 0px 10px #fbbf24b4
     .div-ver-mas
       @include flex(row, center, null)
       .btn-ver-mas
-        @include aplicar-colores(#000, null, linear-gradient(60deg, #FFC107, #FF8F00))
+        @include aplicar-colores(var(--color-secundario), null, var(--gradiente-amarillo))
   .section-estrenos
     .div-categorias
       .div-card-categorias
@@ -118,15 +119,15 @@ main
                 font-size: 0.8rem
         .div-card-categoria-hover
           button
-            @include aplicar-colores(null, null, linear-gradient(60deg, #1976D2, #0D47A1))
+            @include aplicar-colores(null, null, var(--gradiente-azul))
             font-weight: bold
           button:hover
-            @include aplicar-colores(null, null, linear-gradient(60deg, #1976D2e4, #0D47A1e4))
+            @include aplicar-colores(null, null, var(--gradiente-azul-trasparente))
         .card-cartelera:hover
           box-shadow: 0px 0px 10px #4682b4b4
     .div-ver-mas
       .btn-ver-mas
-        @include aplicar-colores(null, null, linear-gradient(60deg, #1976D2, #0D47A1))
+        @include aplicar-colores(null, null, var(--gradiente-azul))
   .section-promociones
     @include flex(column, null, null, 60px)
     .div-card-promos
@@ -134,7 +135,7 @@ main
       .card-promos
         @include flex(column, space-between, none, 15px)
         @include espaciado(20px, null)
-        @include border(null, 10px)
+        @include border(null, var(--border-radius-secundario))
         box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238)
         position: relative
         overflow: hidden
@@ -155,7 +156,7 @@ main
           @include flex(column, null, flex-end)
           z-index: 1
           span
-            @include border(null, 20px)
+            @include border(null, var(--border-radius-primario))
             @include espaciado(6px 12px, null)
             @include aplicar-colores(null, #d2d2d242, null)
             font-size: .8rem
@@ -170,9 +171,9 @@ main
           p
             font-size: 0.8rem
           button
-            @include aplicar-colores(#fff, #d2d2d242, null)
+            @include aplicar-colores(var(--color-primario), #d2d2d242, null)
             @include espaciado(10px, null)
-            @include border(null, 20px)
+            @include border(null, var(--border-radius-primario))
             box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238)
             width: 100%
             text-align: center
@@ -182,19 +183,19 @@ main
       .card-promos:hover
         transform: scale(1.05)
       .lunes-popular
-        @include aplicar-colores(null, null, linear-gradient(60deg, #c62828, #7f0000))
+        @include aplicar-colores(null, null, var(--gradiente-rojo))
       .estudiantes
-        @include aplicar-colores(null, null, linear-gradient(60deg, #1976D2, #0D47A1))
+        @include aplicar-colores(null, null, var(--gradiente-azul))
       .miercoles-para-ti
-        @include aplicar-colores(null, null, linear-gradient(60deg, #FFC107, #FF8F00))
+        @include aplicar-colores(null, null, var(--gradiente-amarillo))
       .adulto-mayor
-        @include aplicar-colores(null, null, linear-gradient(60deg, #FB8C00, #E65100))
+        @include aplicar-colores(null, null, var(--gradiente-naranja))
     .div-ver-mas
       .btn-ver-mas
-        @include aplicar-colores(#000, #fff, null)
+        @include aplicar-colores(var(--color-secundario), var(--color-primario), null)
   .section-informacion
     @include flex(column, center, center, 100px)
-    @include aplicar-colores(#fff, null, linear-gradient(to bottom, #0f172a, #2a3139))
+    @include aplicar-colores(var(--color-primario), null, linear-gradient(to bottom, #0f172a, #2a3139))
     @include espaciado(70px 30px, null)
     .div-descarga-app
       @include flex(column, null, null, 30px)
@@ -202,9 +203,9 @@ main
         @include flex(column, center, center, 30px)
         a
           @include flex(row, center, center, 10px)
-          @include aplicar-colores(#fff, #000, null)
+          @include aplicar-colores(var(--color-primario), var(--color-secundario), null)
           @include espaciado(20px, null)
-          @include border(null, 10px)
+          @include border(null, var(--border-radius-secundario))
           box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238)
           width: 140px
           transition: all 0.3s ease-out
@@ -212,7 +213,7 @@ main
             position: relative
           div
             .descarga-en
-              @include aplicar-colores(#9CA3AF, null, null)
+              @include aplicar-colores(var(--color-terciario), null, null)
               font-size: .75rem
             .descarga-store
               font-weight: bold
@@ -223,7 +224,7 @@ main
         a:active
           transform: scale(0.98)
       .lista-descarga-info
-        @include aplicar-colores(#9CA3AF, null, null)
+        @include aplicar-colores(var(--color-terciario), null, null)
         @include flex(row, center, null, 30px)
         flex-wrap: wrap
         font-size: 0.85rem
@@ -232,17 +233,17 @@ main
       .div-suscribete-aqui
         @include flex(column, null, null, 12px)
         input
-          @include aplicar-colores(#fff, #00000052, null)
+          @include aplicar-colores(var(--color-primario), #00000052, null)
           @include espaciado(16px, null)
-          @include border(1px solid #9ca3af53, 8px)
+          @include border(1px solid #9CA3AF53, 8px)
         button
-          @include aplicar-colores(#fff, null, linear-gradient(60deg, #c62828, #7f0000))
+          @include aplicar-colores(var(--color-primario), null, var(--gradiente-rojo))
           @include espaciado(16px, null)
           @include border(null, 8px)
           font-weight: bold
           transition: all 0.3s ease-in-out
         button:hover
-          @include aplicar-colores(null, null, linear-gradient(60deg, #c62828e4, #7f0000e4))
+          @include aplicar-colores(null, null, var(--gradiente-rojo-transparente))
           transform: scale(1.02)
         button:active
           transform: scale(0.98)
@@ -264,7 +265,7 @@ main
       overflow-x: auto
       width: 100%
       .card-cartelera
-        @include border(null, 10px)
+        @include border(null, var(--border-radius-secundario))
         @include flex(row, null, center)
         overflow: hidden
         width: 220px
@@ -282,7 +283,7 @@ main
             @include flex(column, null, null, 5px)
             .card-duracion
               @include flex(row, null, null, 4px)
-              @include aplicar-colores(#9CA3AF, null, null)
+              @include aplicar-colores(var(--color-terciario), null, null)
               font-size: 0.8rem
       .div-card-categoria-hover
         @include flex(column, null, null, 10px)
@@ -291,11 +292,11 @@ main
         opacity: 0
         transition: all 0.3s ease-in-out
         p
-          @include aplicar-colores(#9CA3AF, null, null)
+          @include aplicar-colores(var(--color-terciario), null, null)
           text-align: justify
           font-size: 0.8rem
         button
-          @include aplicar-colores(#fff, null, null)
+          @include aplicar-colores(var(--color-primario), null, null)
           @include espaciado(10px, null)
           @include border(null, 15px)
           width: 100%
@@ -308,15 +309,16 @@ main
   .div-ver-mas
     @include flex(row, center, null)
     .btn-ver-mas
-      @include aplicar-colores(#fff, null, null)
+      @include aplicar-colores(var(--color-primario), null, null)
       @include espaciado(15px, null)
-      @include border(null, 20px)
+      @include border(null, var(--border-radius-primario))
       font-weight: bold
       transition: all 0.3s ease-in-out
     .btn-ver-mas:hover
       transform: scale(1.1)
     .btn-ver-mas:active
       transform: scale(0.98)
+
 @keyframes salto
   0%
     transform: translateY(0)
@@ -324,3 +326,10 @@ main
     transform: translateY(-5px)
   100%
     transform: translateY(0)
+@keyframes saltoaccesorapido
+  0%
+    transform: translateY(0) rotate(0deg)
+  50%
+    transform: translateY(-5px) rotate(4deg)
+  100%
+    transform: translateY(0) rotate(0deg)

@@ -27,7 +27,7 @@ nav .div-menu .btn-menu {
   justify-content: center;
   align-items: center;
   gap: 0;
-  background: linear-gradient(to right, #c62828, #7f0000);
+  background: var(--gradiente-rojo);
   cursor: pointer;
 }
 
@@ -45,8 +45,8 @@ header .div-detalles-banner {
   align-items: center;
   gap: 10px;
   padding: 50px;
-  color: #fff;
-  border-radius: 20px;
+  color: var(--color-primario);
+  border-radius: var(--border-radius-primario);
   position: absolute;
   font-size: 1.1rem;
   max-width: 500px;
@@ -58,7 +58,7 @@ header .div-detalles-banner p {
 }
 header .div-detalles-banner div span {
   padding: 6px;
-  border-radius: 10px;
+  border-radius: var(--border-radius-secundario);
   background-color: rgba(75, 85, 99, 0.4235294118);
   font-size: 0.8rem;
 }
@@ -76,8 +76,8 @@ header .div-btn-banner {
 }
 header .div-btn-banner .btn-comprar {
   padding: 10px 15px;
-  color: #fff;
-  background: linear-gradient(to right, #c62828, #7f0000);
+  color: var(--color-primario);
+  background: var(--gradiente-rojo);
   border: none;
   border-radius: 15px;
   font-size: 0.7rem;
@@ -86,7 +86,7 @@ header .div-btn-banner .btn-comprar {
 }
 header .div-btn-banner .btn-trailer {
   padding: 10px 15px;
-  color: #fff;
+  color: var(--color-primario);
   background-color: rgba(255, 255, 255, 0.064);
   border: none;
   border-radius: 15px;
@@ -109,21 +109,19 @@ header:hover .div-btn-banner {
   opacity: 1;
 }
 
-main .section-cartelera, main .section-preventa, main .section-estrenos, main .section-promociones {
+main .section-acceso-rapido, main .section-cartelera, main .section-preventa, main .section-estrenos, main .section-promociones {
   padding: 70px 30px 0 30px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  color: #fff;
+  color: var(--color-primario);
 }
 main .section-acceso-rapido {
-  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 30px;
-  color: #fff;
 }
 main .section-acceso-rapido .div-tarjetas-acceso {
   display: grid;
@@ -139,10 +137,10 @@ main .section-acceso-rapido .div-tarjetas-acceso .card-acceso {
   justify-content: center;
   align-items: center;
   gap: 0;
-  border-radius: 10px;
+  border-radius: var(--border-radius-secundario);
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
 main .section-acceso-rapido .div-tarjetas-acceso .card-acceso .fondo-card-acceso {
@@ -165,23 +163,26 @@ main .section-acceso-rapido .div-tarjetas-acceso .card-acceso div p {
   font-size: 0.8rem;
 }
 main .section-acceso-rapido .div-tarjetas-acceso .card-acceso:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(2deg);
 }
 main .section-acceso-rapido .div-tarjetas-acceso .card-acceso:hover .fondo-card-acceso {
   transition: all 0.9s ease-in-out;
   filter: opacity(0.5);
 }
+main .section-acceso-rapido .div-tarjetas-acceso .card-acceso:hover div img {
+  animation: saltoaccesorapido 1s infinite alternate ease-in-out;
+}
 main .section-acceso-rapido .div-tarjetas-acceso .cines {
-  background: linear-gradient(60deg, rgba(198, 40, 40, 0.4039215686), rgba(127, 0, 0, 0.4039215686));
+  background: linear-gradient(to right, rgba(198, 40, 40, 0.4039215686), rgba(127, 0, 0, 0.4039215686));
 }
 main .section-acceso-rapido .div-tarjetas-acceso .cartelera {
-  background: linear-gradient(60deg, rgba(25, 118, 210, 0.4039215686), rgba(13, 71, 161, 0.4039215686));
+  background: linear-gradient(to right, rgba(25, 118, 210, 0.4039215686), rgba(13, 71, 161, 0.4039215686));
 }
 main .section-acceso-rapido .div-tarjetas-acceso .carameleria {
-  background: linear-gradient(60deg, rgba(255, 193, 7, 0.4039215686), rgba(255, 143, 0, 0.4039215686));
+  background: linear-gradient(to right, rgba(255, 193, 7, 0.4039215686), rgba(255, 143, 0, 0.4039215686));
 }
 main .section-acceso-rapido .div-tarjetas-acceso .preventas {
-  background: linear-gradient(60deg, rgba(251, 140, 0, 0.4039215686), rgba(230, 81, 0, 0.4039215686));
+  background: linear-gradient(to right, rgba(251, 140, 0, 0.4039215686), rgba(230, 81, 0, 0.4039215686));
 }
 main .section-cartelera .div-btn-categorias {
   display: flex;
@@ -199,14 +200,14 @@ main .section-cartelera .div-btn-categorias .btn-categorias {
 }
 main .section-cartelera .div-btn-categorias .btn-categorias button {
   padding: 10px 25px;
-  color: #fff;
+  color: var(--color-primario);
   background-color: rgba(31, 41, 55, 0.5019607843);
-  border-radius: 20px;
+  border-radius: var(--border-radius-primario);
   white-space: nowrap;
   font-weight: bold;
 }
 main .section-cartelera .div-btn-categorias .btn-categorias .btn-seleccionado {
-  background: linear-gradient(to right, #c62828, #7f0000);
+  background: var(--gradiente-rojo);
 }
 main .section-cartelera .div-btn-categorias .btn-categorias button:hover {
   background-color: #262f3e;
@@ -219,21 +220,21 @@ main .section-cartelera .div-categorias .div-card-categorias .card-cartelera .ca
 main .section-cartelera .div-categorias .div-card-categorias .card-cartelera .card-filtro-hover .div-card-bottom .card-horarios span {
   padding: 4px 8px;
   background-color: rgba(75, 85, 99, 0.4235294118);
-  border-radius: 10px;
+  border-radius: var(--border-radius-secundario);
   font-size: 0.7rem;
 }
 main .section-cartelera .div-categorias .div-card-categorias .div-card-categoria-hover button {
-  background: linear-gradient(to right, #c62828, #7f0000);
+  background: var(--gradiente-rojo);
   font-weight: bold;
 }
 main .section-cartelera .div-categorias .div-card-categorias .div-card-categoria-hover button:hover {
-  background: linear-gradient(to right, rgba(198, 40, 40, 0.8941176471), rgba(127, 0, 0, 0.8941176471));
+  background: var(--gradiente-rojo-transparente);
 }
 main .section-cartelera .div-categorias .div-card-categorias .card-cartelera:hover {
   box-shadow: 0px 0px 10px rgba(255, 123, 123, 0.7058823529);
 }
 main .section-cartelera .div-ver-mas .btn-ver-mas {
-  background: linear-gradient(to right, #c62828, #7f0000);
+  background: var(--gradiente-rojo);
 }
 main .section-preventa .div-categorias .div-card-categorias .card-cartelera .card-filtro-hover .div-card-bottom .div-estreno {
   display: flex;
@@ -247,12 +248,12 @@ main .section-preventa .div-categorias .div-card-categorias .card-cartelera .car
   font-size: 0.9rem;
 }
 main .section-preventa .div-categorias .div-card-categorias .div-card-categoria-hover button {
-  color: #000;
-  background: linear-gradient(60deg, #FFC107, #FF8F00);
+  color: var(--color-secundario);
+  background: var(--gradiente-amarillo);
   font-weight: bold;
 }
 main .section-preventa .div-categorias .div-card-categorias .div-card-categoria-hover button:hover {
-  background: linear-gradient(60deg, rgba(255, 193, 7, 0.8941176471), rgba(255, 143, 0, 0.8941176471));
+  background: var(--gradiente-amarillo-transparente);
 }
 main .section-preventa .div-categorias .div-card-categorias .card-cartelera:hover {
   box-shadow: 0px 0px 10px rgba(251, 191, 36, 0.7058823529);
@@ -264,8 +265,8 @@ main .section-preventa .div-ver-mas {
   gap: 0;
 }
 main .section-preventa .div-ver-mas .btn-ver-mas {
-  color: #000;
-  background: linear-gradient(60deg, #FFC107, #FF8F00);
+  color: var(--color-secundario);
+  background: var(--gradiente-amarillo);
 }
 main .section-estrenos .div-categorias .div-card-categorias .card-cartelera .card-filtro-hover .div-card-bottom .div-estreno {
   display: flex;
@@ -275,17 +276,17 @@ main .section-estrenos .div-categorias .div-card-categorias .card-cartelera .car
   font-size: 0.8rem;
 }
 main .section-estrenos .div-categorias .div-card-categorias .div-card-categoria-hover button {
-  background: linear-gradient(60deg, #1976D2, #0D47A1);
+  background: var(--gradiente-azul);
   font-weight: bold;
 }
 main .section-estrenos .div-categorias .div-card-categorias .div-card-categoria-hover button:hover {
-  background: linear-gradient(60deg, rgba(25, 118, 210, 0.8941176471), rgba(13, 71, 161, 0.8941176471));
+  background: var(--gradiente-azul-trasparente);
 }
 main .section-estrenos .div-categorias .div-card-categorias .card-cartelera:hover {
   box-shadow: 0px 0px 10px rgba(70, 130, 180, 0.7058823529);
 }
 main .section-estrenos .div-ver-mas .btn-ver-mas {
-  background: linear-gradient(60deg, #1976D2, #0D47A1);
+  background: var(--gradiente-azul);
 }
 main .section-promociones {
   display: flex;
@@ -305,7 +306,7 @@ main .section-promociones .div-card-promos .card-promos {
   align-items: none;
   gap: 15px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: var(--border-radius-secundario);
   box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238);
   position: relative;
   overflow: hidden;
@@ -334,7 +335,7 @@ main .section-promociones .div-card-promos .card-promos .descuentos {
   z-index: 1;
 }
 main .section-promociones .div-card-promos .card-promos .descuentos span {
-  border-radius: 20px;
+  border-radius: var(--border-radius-primario);
   padding: 6px 12px;
   background-color: rgba(210, 210, 210, 0.2588235294);
   font-size: 0.8rem;
@@ -356,10 +357,10 @@ main .section-promociones .div-card-promos .card-promos .ver-detalles p {
   font-size: 0.8rem;
 }
 main .section-promociones .div-card-promos .card-promos .ver-detalles button {
-  color: #fff;
+  color: var(--color-primario);
   background-color: rgba(210, 210, 210, 0.2588235294);
   padding: 10px;
-  border-radius: 20px;
+  border-radius: var(--border-radius-primario);
   box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238);
   width: 100%;
   text-align: center;
@@ -372,20 +373,20 @@ main .section-promociones .div-card-promos .card-promos:hover {
   transform: scale(1.05);
 }
 main .section-promociones .div-card-promos .lunes-popular {
-  background: linear-gradient(60deg, #c62828, #7f0000);
+  background: var(--gradiente-rojo);
 }
 main .section-promociones .div-card-promos .estudiantes {
-  background: linear-gradient(60deg, #1976D2, #0D47A1);
+  background: var(--gradiente-azul);
 }
 main .section-promociones .div-card-promos .miercoles-para-ti {
-  background: linear-gradient(60deg, #FFC107, #FF8F00);
+  background: var(--gradiente-amarillo);
 }
 main .section-promociones .div-card-promos .adulto-mayor {
-  background: linear-gradient(60deg, #FB8C00, #E65100);
+  background: var(--gradiente-naranja);
 }
 main .section-promociones .div-ver-mas .btn-ver-mas {
-  color: #000;
-  background-color: #fff;
+  color: var(--color-secundario);
+  background-color: var(--color-primario);
 }
 main .section-informacion {
   display: flex;
@@ -393,7 +394,7 @@ main .section-informacion {
   justify-content: center;
   align-items: center;
   gap: 100px;
-  color: #fff;
+  color: var(--color-primario);
   background: linear-gradient(to bottom, #0f172a, #2a3139);
   padding: 70px 30px;
 }
@@ -415,10 +416,10 @@ main .section-informacion .div-descarga-app .div-descargas a {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  color: #fff;
-  background-color: #000;
+  color: var(--color-primario);
+  background-color: var(--color-secundario);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: var(--border-radius-secundario);
   box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238);
   width: 140px;
   transition: all 0.3s ease-out;
@@ -427,7 +428,7 @@ main .section-informacion .div-descarga-app .div-descargas a img {
   position: relative;
 }
 main .section-informacion .div-descarga-app .div-descargas a div .descarga-en {
-  color: #9CA3AF;
+  color: var(--color-terciario);
   font-size: 0.75rem;
 }
 main .section-informacion .div-descarga-app .div-descargas a div .descarga-store {
@@ -443,7 +444,7 @@ main .section-informacion .div-descarga-app .div-descargas a:active {
   transform: scale(0.98);
 }
 main .section-informacion .div-descarga-app .lista-descarga-info {
-  color: #9CA3AF;
+  color: var(--color-terciario);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -462,22 +463,22 @@ main .section-informacion .div-suscribirse .div-suscribete-aqui {
   gap: 12px;
 }
 main .section-informacion .div-suscribirse .div-suscribete-aqui input {
-  color: #fff;
+  color: var(--color-primario);
   background-color: rgba(0, 0, 0, 0.3215686275);
   padding: 16px;
   border: 1px solid rgba(156, 163, 175, 0.3254901961);
   border-radius: 8px;
 }
 main .section-informacion .div-suscribirse .div-suscribete-aqui button {
-  color: #fff;
-  background: linear-gradient(60deg, #c62828, #7f0000);
+  color: var(--color-primario);
+  background: var(--gradiente-rojo);
   padding: 16px;
   border-radius: 8px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
 main .section-informacion .div-suscribirse .div-suscribete-aqui button:hover {
-  background: linear-gradient(60deg, rgba(198, 40, 40, 0.8941176471), rgba(127, 0, 0, 0.8941176471));
+  background: var(--gradiente-rojo-transparente);
   transform: scale(1.02);
 }
 main .section-informacion .div-suscribirse .div-suscribete-aqui button:active {
@@ -514,7 +515,7 @@ main .div-categorias .div-card-categorias {
   width: 100%;
 }
 main .div-categorias .div-card-categorias .card-cartelera {
-  border-radius: 10px;
+  border-radius: var(--border-radius-secundario);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -542,7 +543,7 @@ main .div-categorias .div-card-categorias .card-cartelera .card-filtro-hover .di
   display: flex;
   flex-direction: row;
   gap: 4px;
-  color: #9CA3AF;
+  color: var(--color-terciario);
   font-size: 0.8rem;
 }
 main .div-categorias .div-card-categorias .div-card-categoria-hover {
@@ -555,12 +556,12 @@ main .div-categorias .div-card-categorias .div-card-categoria-hover {
   transition: all 0.3s ease-in-out;
 }
 main .div-categorias .div-card-categorias .div-card-categoria-hover p {
-  color: #9CA3AF;
+  color: var(--color-terciario);
   text-align: justify;
   font-size: 0.8rem;
 }
 main .div-categorias .div-card-categorias .div-card-categoria-hover button {
-  color: #fff;
+  color: var(--color-primario);
   padding: 10px;
   border-radius: 15px;
   width: 100%;
@@ -581,9 +582,9 @@ main .div-ver-mas {
   gap: 0;
 }
 main .div-ver-mas .btn-ver-mas {
-  color: #fff;
+  color: var(--color-primario);
   padding: 15px;
-  border-radius: 20px;
+  border-radius: var(--border-radius-primario);
   font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
@@ -605,11 +606,22 @@ main .div-ver-mas .btn-ver-mas:active {
     transform: translateY(0);
   }
 }
+@keyframes saltoaccesorapido {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(4deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  color: #fff;
+  color: var(--color-primario);
   background: linear-gradient(15deg, #723e7b 3%, #9b2352 97%);
   padding: 20px;
 }
@@ -659,7 +671,7 @@ footer .section-descarga .btn-descarga-footer {
   gap: 20px;
 }
 footer .section-descarga .btn-descarga-footer a {
-  background-color: #000;
+  background-color: var(--color-secundario);
   padding: 15px 30px;
   border: 0;
   border-radius: 10px;
@@ -699,7 +711,7 @@ footer .section-terminos .redes {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    color: #fff;
+    color: var(--color-primario);
   }
   nav .navergacion a {
     transition: all 0.3s linear;
@@ -718,8 +730,8 @@ footer .section-terminos .redes {
     gap: 0;
   }
   nav .ciudades select {
-    color: #fff;
-    background-color: #dc2626;
+    color: var(--color-primario);
+    background-color: #c62828;
     padding: 6px 30px 6px 8px;
     border: none;
     border-radius: 15px;
@@ -733,8 +745,8 @@ footer .section-terminos .redes {
     background-size: 16px;
   }
   nav .ciudades select option {
-    color: #000;
-    background-color: #fff;
+    color: var(--color-secundario);
+    background-color: var(--color-primario);
   }
   nav .ciudades select:focus {
     outline: none;
@@ -752,7 +764,7 @@ footer .section-terminos .redes {
   header {
     padding: 0;
     margin: 50px 50px 0 50px;
-    border-radius: 20px;
+    border-radius: var(--border-radius-primario);
     overflow: hidden;
   }
 }
@@ -842,6 +854,21 @@ footer .section-terminos .redes {
     padding: 20px;
   }
 }
+:root {
+  --color-primario: #fff;
+  --color-secundario: #000;
+  --color-terciario: #9CA3AF;
+  --gradiente-rojo: linear-gradient(to right, #c62828, #7f0000);
+  --gradiente-rojo-transparente: linear-gradient(to right, #c62828e4, #7f0000e4);
+  --gradiente-azul: linear-gradient(to right, #1976D2, #0D47A1);
+  --gradiente-azul-trasparente: linear-gradient(to right, #1976D2e4, #0D47A1e4);
+  --gradiente-amarillo: linear-gradient(to right, #FFC107, #FF8F00);
+  --gradiente-amarillo-transparente: linear-gradient(to right, #FFC107e4, #FF8F00e4);
+  --gradiente-naranja: linear-gradient(to right, #FB8C00, #E65100);
+  --border-radius-primario: 20px;
+  --border-radius-secundario: 10px;
+}
+
 * {
   padding: 0;
   margin: 0;

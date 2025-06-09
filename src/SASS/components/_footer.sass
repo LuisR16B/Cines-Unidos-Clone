@@ -1,6 +1,6 @@
 footer
   @include flex(column, null, null, 20px)
-  @include aplicar-colores(#fff, null, linear-gradient(15deg, #723e7b 3%, #9b2352 97%))
+  @include aplicar-colores(var(--color-primario), null, linear-gradient(15deg, #723e7b 3%, #9b2352 97%))
   @include espaciado(20px, null)
   .section-top
     @include flex(column, null, null, 20px)
@@ -25,7 +25,7 @@ footer
     .btn-descarga-footer
       @include flex(row, null, null, 20px)
       a
-        @include aplicar-colores(null, #000, null)
+        @include aplicar-colores(null, var(--color-secundario), null)
         @include espaciado(15px 30px, null)
         @include border(0, 10px)
         box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238)
