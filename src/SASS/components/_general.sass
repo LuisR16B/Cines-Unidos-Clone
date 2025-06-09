@@ -1,18 +1,36 @@
-@mixin aplicar-colores($color, $bg)
+@mixin aplicar-colores($color, $bg-c, $bg)
   @if $color != null
     color: $color
+  @if $bg-c != null
+    background-color: $bg-c
   @if $bg != null
-    background-color: $bg
+    background: $bg
 
 @mixin espaciado($padding, $margin)
-  padding: $padding
-  margin: $margin
+  @if $padding != null
+    padding: $padding
+  @if $margin != null
+    margin: $margin
 
 @mixin flex($direccion, $justificacion, $alineacion, $gap: 0)
   display: flex
   flex-direction: $direccion
-  justify-content: $justificacion
-  align-items: $alineacion
+  @if $justificacion != null
+    justify-content: $justificacion
+  @if $alineacion != null
+    align-items: $alineacion
+  gap: $gap
+
+@mixin grid($repeat, $dimensioncol, $dimensionfil, $justificacion, $gap: 0)
+  display: grid
+  @if $repeat != null
+    grid-template-columns: repeat($repeat, $dimensioncol)
+  @if $dimensioncol != null and $repeat == null
+    grid-template-columns: $dimensioncol
+  @if $dimensionfil != null
+    grid-auto-rows: $dimensionfil
+  @if $justificacion != null
+    justify-items: $justificacion
   gap: $gap
 
 @mixin border($border, $border-radius)

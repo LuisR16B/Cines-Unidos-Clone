@@ -1,10 +1,10 @@
 nav
   @include flex(row, space-between, center)
-  @include espaciado(15px, 0)
+  @include espaciado(15px, null)
+  @include aplicar-colores(null, null, #0000004e)
   position: sticky
   top: 0
   z-index: 2020
-  background: rgba(0, 0, 0, 0.305)
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
   backdrop-filter: blur(20px)
   -webkit-backdrop-filter: blur(20px)
@@ -13,8 +13,8 @@ nav
     display: none
   .div-menu
     .btn-menu
-      @include espaciado(6px, 0)
+      @include espaciado(6px, null)
       @include border(none, 8px)
       @include flex(row, center, center)
-      background: linear-gradient(to right, #c62828, #7f0000)
+      @include aplicar-colores(null, null, linear-gradient(to right, #c62828, #7f0000))
       cursor: pointer

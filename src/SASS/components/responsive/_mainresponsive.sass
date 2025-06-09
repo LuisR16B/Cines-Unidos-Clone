@@ -2,7 +2,7 @@
   main
     .section-acceso-rapido
       .div-tarjetas-acceso
-        grid-template-columns: repeat(2, 1fr)
+        @include grid(2, 1fr, 1fr, center, 30px)
     .section-informacion
       .div-descarga-app
         .div-descargas
@@ -11,20 +11,20 @@
         .div-suscribete-aqui
           @include flex(row, center, center, 20px)
           button
-            padding: 16px 80px
+            @include espaciado(16px 80px, null)
     .section-promociones
       .div-card-promos
-        grid-template-columns: repeat(2, 1fr)
+        @include grid(2, 1fr, 1fr, null, 30px)
 
 @media only screen and (min-width: 992px)
   main
     .section-acceso-rapido
       .div-tarjetas-acceso
-        grid-template-columns: repeat(4, 1fr)
+        @include grid(4, 1fr, 1fr, center, 30px)
     .div-categorias
       .div-card-categorias
         .card-cartelera
           width: 250px
     .section-promociones
       .div-card-promos
-        grid-template-columns: repeat(4, 1fr)
+        @include grid(4, 1fr, 1fr, null, 30px)

@@ -1,23 +1,17 @@
 @media only screen and (min-width: 768px)
   footer
     .section-top
-      display: grid
-      grid-template-columns: 30% auto
-      gap: 40px
+      @include grid(null, 30% auto, null, null, 40px)
       .div-logo
-        flex-direction: column
+        @include flex(column, null, center, 20px)
         text-align: center
 @media only screen and (min-width: 992px)
   footer
     .section-top
       .div-navegacion
-        grid-template-columns: repeat(3, 1fr)
+        @include grid(3, 1fr, null, null, 20px)
     .section-descarga
-      flex-direction: row
-      justify-content: space-around
+      @include flex(row, space-around, center, 20px)
     .section-terminos
-      flex-direction: row
-      justify-content: space-between
-      padding: 20px
-
-
+      @include flex(row, space-around, center, 20px)
+      @include espaciado(20px, null)

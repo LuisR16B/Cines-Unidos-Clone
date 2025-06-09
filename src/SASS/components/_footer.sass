@@ -1,64 +1,44 @@
 footer
-  background: linear-gradient(15deg, #723e7b 3%, #9b2352 97%)
-  color: #fff
-  padding: 20px
-  display: flex
-  flex-direction: column
-  gap: 20px
+  @include flex(column, null, null, 20px)
+  @include aplicar-colores(#fff, null, linear-gradient(15deg, #723e7b 3%, #9b2352 97%))
+  @include espaciado(20px, null)
   .section-top
-    display: flex
-    flex-direction: column
-    gap: 20px
+    @include flex(column, null, null, 20px)
     .div-logo
-      display: flex
-      align-items: center
-      gap: 20px
+      @include flex(row, null, center, 20px)
     .div-navegacion
-      display: grid
-      grid-template-columns: repeat(2, 1fr)
-      gap: 20px
+      @include grid(2, 1fr, null, null, 20px)
       div
-        display: flex
-        flex-direction: column
-        gap: 10px
+        @include flex(column, null, null, 10px)
         ul
-          padding: 0 20px
+          @include espaciado(0 20px, null)
           font-size: 0.85rem
   .section-descarga
-    display: flex
-    flex-direction: column
-    align-items: center
-    gap: 20px
+    @include flex(column, null, center, 20px)
+    @include espaciado(20px 0, null)
     border-top: 1px solid #ffffff41
     border-bottom: 1px solid #ffffff41
-    padding: 20px 0
     .titulo-descarga
       text-align: center
+      p
+        font-size: .85rem
     .btn-descarga-footer
-      display: flex
-      gap: 20px
+      @include flex(row, null, null, 20px)
       a
-        background-color: #000
-        padding: 15px 30px
-        border-radius: 10px
-        width: 90px
+        @include aplicar-colores(null, #000, null)
+        @include espaciado(15px 30px, null)
+        @include border(0, 10px)
         box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238)
         .descarga
           font-size: 0.8rem
         .tienda
           font-size: 0.85rem
       a:hover
-        background-color: #000000c0
+        @include aplicar-colores(null, #000000c0, null)
   .section-terminos
-    display: flex
-    flex-direction: column
-    gap: 20px
-    align-items: center
+    @include flex(column, null, center, 20px)
     font-size: 0.8rem
     .div-terminos
-      display: flex
-      gap: 5px
-      flex-direction: column
+      @include flex(column, null, null, 4px)
     .redes
-      display: flex
-      gap: 20px
+      @include flex(row, null, null, 20px)

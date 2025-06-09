@@ -1,15 +1,15 @@
 main
+  .section-cartelera, .section-preventa, .section-estrenos, .section-promociones
+    @include espaciado(70px 30px 0 30px, null)
+    @include flex(column, null, null, 30px)
+    @include aplicar-colores(#fff, null, null)
   .section-acceso-rapido
-    @include espaciado(30px, 0)
+    @include espaciado(30px, null)
     @include flex(column, center, center, 30px)
-    color: white
+    @include aplicar-colores(#fff, null, null)
     .div-tarjetas-acceso
+      @include grid(null, 1fr, 1fr, center, 30px)
       width: 100%
-      display: grid
-      grid-template-columns: repeat(1, 1fr)
-      grid-auto-rows: 1fr
-      justify-items: center
-      gap: 30px
       .card-acceso
         @include flex(row, center, center)
         @include border(null, 10px)
@@ -26,179 +26,139 @@ main
           @include flex(column, none, center, 5px)
           position: absolute
           p
+            @include aplicar-colores(#D1D5DB, null, null)
             font-size: 0.8rem
-            @include aplicar-colores(#D1D5DB, null)
       .card-acceso:hover
         transform: scale(1.1)
         .fondo-card-acceso
           transition: all 0.9s ease-in-out
           filter: opacity(0.5)
       .cines
-        background: linear-gradient(60deg, #c6282867, #7f000067)
+        @include aplicar-colores(null, null, linear-gradient(60deg, #c6282867, #7f000067))
       .cartelera
-        background: linear-gradient(60deg, #1976D267, #0D47A167)
+        @include aplicar-colores(null, null, linear-gradient(60deg, #1976D267, #0D47A167))
       .carameleria
-        background: linear-gradient(60deg, #FFC10767, #FF8F0067)
+        @include aplicar-colores(null, null, linear-gradient(60deg, #FFC10767, #FF8F0067))
       .preventas
-        background: linear-gradient(60deg, #FB8C0067, #E6510067)
+        @include aplicar-colores(null, null, linear-gradient(60deg, #FB8C0067, #E6510067))
   .section-cartelera
-    @include espaciado(70px 30px 0 30px, 0)
-    @include flex(column, none, none, 30px)
-    @include aplicar-colores(#fff, null)
     .div-btn-categorias
-      @include flex(row, none, none, 10px)
+      @include flex(row, null, null, 10px)
       width: 100%
       .btn-categorias
-        @include flex(row, none, none, 20px)
+        @include flex(row, null, null, 20px)
         overflow: hidden
         overflow-x: auto
         width: 100%
         button
-          @include espaciado(10px 25px, 0)
-          @include aplicar-colores(#fff, #1f293780)
+          @include espaciado(10px 25px, null)
+          @include aplicar-colores(#fff, #1f293780, null)
           @include border(null, 20px)
           white-space: nowrap
           font-weight: bold
         .btn-seleccionado
-          background: linear-gradient(to right, #c62828, #7f0000)
+          @include aplicar-colores(null, null, linear-gradient(to right, #c62828, #7f0000))
         button:hover
-          @include aplicar-colores(null, #262f3e)
+          @include aplicar-colores(null, #262f3e, null)
     .div-categorias
       .div-card-categorias
         .card-cartelera
           .card-filtro-hover
             .div-card-bottom
               .card-horarios
-                @include flex(row, none, none, 5px)
+                @include flex(row, null, null, 5px)
                 span
-                  @include espaciado(4px 8px, 0)
-                  @include aplicar-colores(null, #4b55636c)
+                  @include espaciado(4px 8px, null)
+                  @include aplicar-colores(null, #4b55636c, null)
                   @include border(null, 10px)
                   font-size: 0.7rem
         .div-card-categoria-hover
           button
-            background: linear-gradient(to right, #c62828, #7f0000)
+            @include aplicar-colores(null, null, linear-gradient(to right, #c62828, #7f0000))
             font-weight: bold
           button:hover
-            background: linear-gradient(to right, #c62828e4, #7f0000e4)
+            @include aplicar-colores(null, null, linear-gradient(to right, #c62828e4, #7f0000e4))
         .card-cartelera:hover
           box-shadow: 0px 0px 10px #ff7b7bb4
     .div-ver-mas
       .btn-ver-mas
-        background: linear-gradient(to right, #c62828, #7f0000)
+        @include aplicar-colores(null, null, linear-gradient(to right, #c62828, #7f0000))
   .section-preventa
-    @include flex(column, none, none, 30px)
-    @include aplicar-colores(#fff, null)
-    @include espaciado(70px 30px 0 30px, 0)
     .div-categorias
       .div-card-categorias
         .card-cartelera
           .card-filtro-hover
             .div-card-bottom
               .div-estreno
-                @include flex(row, none, center, 5px)
+                @include flex(row, null, center, 5px)
                 font-size: 0.8rem
               .div-fecha-preventa
-                @include aplicar-colores(#fbbf24, null)
+                @include aplicar-colores(#fbbf24, null, null)
                 font-size: 0.9rem
         .div-card-categoria-hover
           button
-            @include aplicar-colores(#000, null)
+            @include aplicar-colores(#000, null, linear-gradient(60deg, #FFC107, #FF8F00))
             font-weight: bold
-            background: linear-gradient(60deg, #FFC107, #FF8F00)
           button:hover
-            background: linear-gradient(60deg, #FFC107e4, #FF8F00e4)
+            @include aplicar-colores(null, null, linear-gradient(60deg, #FFC107e4, #FF8F00e4))
         .card-cartelera:hover
           box-shadow: 0px 0px 10px #fbbf24b4
-    .div-mas-preventas
-      display: flex
-      justify-content: center
-      .btn-ver-preventas
-        font-weight: bold
-        background: linear-gradient(60deg, #FFC107, #FF8F00)
-        color: #000
-        padding: 15px
-        border-radius: 20px
-        transition: all 0.3s ease-in-out
-      .btn-ver-preventas:hover
-        transform: scale(1.1)
-      .btn-ver-preventas:active
-        transform: scale(0.98)
+    .div-ver-mas
+      @include flex(row, center, null)
+      .btn-ver-mas
+        @include aplicar-colores(#000, null, linear-gradient(60deg, #FFC107, #FF8F00))
   .section-estrenos
-    @include flex(column, none, none, 30px)
-    @include aplicar-colores(#fff, null)
-    @include espaciado(70px 30px 0 30px, 0)
     .div-categorias
       .div-card-categorias
         .card-cartelera
           .card-filtro-hover
             .div-card-bottom
               .div-estreno
-                @include flex(row, none, center, 5px)
+                @include flex(row, null, center, 5px)
                 font-size: 0.8rem
         .div-card-categoria-hover
           button
-            background: linear-gradient(60deg, #1976D2, #0D47A1)
+            @include aplicar-colores(null, null, linear-gradient(60deg, #1976D2, #0D47A1))
             font-weight: bold
           button:hover
-            background: linear-gradient(60deg, #1976D2e4, #0D47A1e4)
+            @include aplicar-colores(null, null, linear-gradient(60deg, #1976D2e4, #0D47A1e4))
         .card-cartelera:hover
           box-shadow: 0px 0px 10px #4682b4b4
-    .div-mas-estrenos
-      display: flex
-      justify-content: center
-      .btn-ver-estrenos
-        font-weight: bold
-        background: linear-gradient(60deg, #1976D2, #0D47A1)
-        color: #fff
-        padding: 15px
-        border-radius: 20px
-        transition: all 0.3s ease-in-out
-      .btn-ver-estrenos:hover
-        transform: scale(1.1)
-      .btn-ver-estrenos:active
-        transform: scale(0.98)
+    .div-ver-mas
+      .btn-ver-mas
+        @include aplicar-colores(null, null, linear-gradient(60deg, #1976D2, #0D47A1))
   .section-promociones
-    @include flex(column, none, none, 60px)
-    @include aplicar-colores(#fff, null)
-    @include espaciado(70px 30px 0 30px, 0)
+    @include flex(column, null, null, 60px)
     .div-card-promos
-      display: grid
-      grid-template-columns: 1fr
-      grid-auto-rows: 1fr
-      gap: 30px
+      @include grid(null, 1fr, 1fr, null, 30px)
       .card-promos
         @include flex(column, space-between, none, 15px)
+        @include espaciado(20px, null)
+        @include border(null, 10px)
         box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238)
         position: relative
         overflow: hidden
-        padding: 20px
-        border-radius: 10px
         transition: all 0.3s ease-in-out
-        .circulo-derecho
+        .circulo-derecho, .circulo-izquierda
+          @include border(null, 100%)
+          @include aplicar-colores(null, #ffffff24, null)
           position: absolute
+          width: 80px
+          height: 80px
+        .circulo-derecho
           top: -30px
           right: -30px
-          background-color: #ffffff24
-          width: 80px
-          height: 80px
-          border-radius: 100%
         .circulo-izquierda
-          position: absolute
           bottom: -30px
           left: -30px
-          background-color: #ffffff24
-          width: 80px
-          height: 80px
-          border-radius: 100%
         .descuentos
-          @include flex(column, none, flex-end)
+          @include flex(column, null, flex-end)
           z-index: 1
           span
-            background-color: #d2d2d242
-            padding: 6px 12px
+            @include border(null, 20px)
+            @include espaciado(6px 12px, null)
+            @include aplicar-colores(null, #d2d2d242, null)
             font-size: .8rem
-            border-radius: 20px
             box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238)
         .titulo-info-promo
           border-bottom: 1px solid #ffffff5b
@@ -206,48 +166,44 @@ main
           p
             font-size: 0.8rem
         .ver-detalles
-          display: flex
-          flex-direction: column
-          gap: 5px
+          @include flex(column, null, null, 5px)
           p
             font-size: 0.8rem
           button
-            background-color: #d2d2d242
-            padding: 10px
-            border-radius:  20px
+            @include aplicar-colores(#fff, #d2d2d242, null)
+            @include espaciado(10px, null)
+            @include border(null, 20px)
             box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238)
-            color: #fff
             width: 100%
             text-align: center
             font-weight: bold
           button:hover
-            background-color: #d2d2d28f
+            @include aplicar-colores(null, #d2d2d28f, null)
       .card-promos:hover
         transform: scale(1.05)
       .lunes-popular
-        background: linear-gradient(60deg, #c62828, #7f0000)
+        @include aplicar-colores(null, null, linear-gradient(60deg, #c62828, #7f0000))
       .estudiantes
-        background: linear-gradient(60deg, #1976D2, #0D47A1)
+        @include aplicar-colores(null, null, linear-gradient(60deg, #1976D2, #0D47A1))
       .miercoles-para-ti
-        background: linear-gradient(60deg, #FFC107, #FF8F00)
+        @include aplicar-colores(null, null, linear-gradient(60deg, #FFC107, #FF8F00))
       .adulto-mayor
-        background: linear-gradient(60deg, #FB8C00, #E65100)
+        @include aplicar-colores(null, null, linear-gradient(60deg, #FB8C00, #E65100))
     .div-ver-mas
-      button
-        @include aplicar-colores(#000, #fff)
+      .btn-ver-mas
+        @include aplicar-colores(#000, #fff, null)
   .section-informacion
     @include flex(column, center, center, 100px)
-    @include aplicar-colores(#fff, null)
-    @include espaciado(70px 30px, 0)
-    background: linear-gradient(to bottom, #0f172a, #2a3139)
+    @include aplicar-colores(#fff, null, linear-gradient(to bottom, #0f172a, #2a3139))
+    @include espaciado(70px 30px, null)
     .div-descarga-app
-      @include flex(column, none, none, 30px)
+      @include flex(column, null, null, 30px)
       .div-descargas
         @include flex(column, center, center, 30px)
         a
           @include flex(row, center, center, 10px)
-          @include aplicar-colores(#fff, #000)
-          @include espaciado(20px, 0)
+          @include aplicar-colores(#fff, #000, null)
+          @include espaciado(20px, null)
           @include border(null, 10px)
           box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238)
           width: 140px
@@ -256,8 +212,8 @@ main
             position: relative
           div
             .descarga-en
+              @include aplicar-colores(#9CA3AF, null, null)
               font-size: .75rem
-              @include aplicar-colores(#9CA3AF, null)
             .descarga-store
               font-weight: bold
         a:hover img
@@ -267,32 +223,26 @@ main
         a:active
           transform: scale(0.98)
       .lista-descarga-info
-        @include aplicar-colores(#9CA3AF, null)
-        display: flex
-        gap: 30px
+        @include aplicar-colores(#9CA3AF, null, null)
+        @include flex(row, center, null, 30px)
         flex-wrap: wrap
-        justify-content: center
         font-size: 0.85rem
     .div-suscribirse
-      @include flex(column, none, none, 30px)
+      @include flex(column, null, null, 30px)
       .div-suscribete-aqui
-        display: flex
-        flex-direction: column
-        gap: 12px
+        @include flex(column, null, null, 12px)
         input
-          padding: 16px
-          border-radius: 8px
-          background-color: #00000052
-          border: 1px solid #9ca3af53
+          @include aplicar-colores(#fff, #00000052, null)
+          @include espaciado(16px, null)
+          @include border(1px solid #9ca3af53, 8px)
         button
-          background: linear-gradient(to right, #ff7b7b, #d32f2f)
+          @include aplicar-colores(#fff, null, linear-gradient(60deg, #c62828, #7f0000))
+          @include espaciado(16px, null)
+          @include border(null, 8px)
           font-weight: bold
-          color: #fff
-          padding: 16px
-          border-radius: 8px
           transition: all 0.3s ease-in-out
         button:hover
-          background: linear-gradient(to right, #ff7b7be4, #d32f2fe4)
+          @include aplicar-colores(null, null, linear-gradient(60deg, #c62828e4, #7f0000e4))
           transform: scale(1.02)
         button:active
           transform: scale(0.98)
@@ -303,19 +253,19 @@ main
         font-weight: 900
         font-size: 1.9rem
       p
-        @include aplicar-colores(#D1D5DB, null)
+        @include aplicar-colores(#D1D5DB, null, null)
   .div-categorias
-    @include flex(row, none, none, 10px)
+    @include flex(row, null, null, 10px)
     width: 100%
     .div-card-categorias
-      @include flex(row, none, none, 30px)
+      @include flex(row, null, null, 30px)
+      @include espaciado(20px, null)
       overflow: hidden
       overflow-x: auto
       width: 100%
-      padding: 20px 20px
       .card-cartelera
         @include border(null, 10px)
-        @include flex(row, none, center)
+        @include flex(row, null, center)
         overflow: hidden
         width: 220px
         flex-shrink: 0
@@ -324,29 +274,29 @@ main
         transition: all 0.3s ease-in-out
         position: relative
         .card-filtro-hover
-          @include aplicar-colores(null, #1F2937)
+          @include aplicar-colores(null, #1F2937, null)
           height: 100%
           transition: all 0.3s ease-in-out
           .div-card-bottom
-            @include espaciado(15px, 0)
-            @include flex(column, none, none, 5px)
+            @include espaciado(15px, null)
+            @include flex(column, null, null, 5px)
             .card-duracion
-              @include flex(row, none, none, 4px)
-              @include aplicar-colores(#9CA3AF, null)
+              @include flex(row, null, null, 4px)
+              @include aplicar-colores(#9CA3AF, null, null)
               font-size: 0.8rem
       .div-card-categoria-hover
-        @include flex(column, none, none, 10px)
-        @include espaciado(15px, 0)
+        @include flex(column, null, null, 10px)
+        @include espaciado(15px, null)
         position: absolute
         opacity: 0
         transition: all 0.3s ease-in-out
         p
-          @include aplicar-colores(#9CA3AF, null)
+          @include aplicar-colores(#9CA3AF, null, null)
           text-align: justify
           font-size: 0.8rem
         button
-          @include aplicar-colores(#fff, null)
-          @include espaciado(10px, 0)
+          @include aplicar-colores(#fff, null, null)
+          @include espaciado(10px, null)
           @include border(null, 15px)
           width: 100%
       .card-cartelera:hover
@@ -356,13 +306,12 @@ main
         .div-card-categoria-hover
           opacity: 1
   .div-ver-mas
-    display: flex
-    justify-content: center
+    @include flex(row, center, null)
     .btn-ver-mas
+      @include aplicar-colores(#fff, null, null)
+      @include espaciado(15px, null)
+      @include border(null, 20px)
       font-weight: bold
-      color: #fff
-      padding: 15px
-      border-radius: 20px
       transition: all 0.3s ease-in-out
     .btn-ver-mas:hover
       transform: scale(1.1)

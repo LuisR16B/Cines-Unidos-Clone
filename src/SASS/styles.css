@@ -6,11 +6,10 @@ nav {
   align-items: center;
   gap: 0;
   padding: 15px;
-  margin: 0;
+  background: rgba(0, 0, 0, 0.3058823529);
   position: sticky;
   top: 0;
   z-index: 2020;
-  background: rgba(0, 0, 0, 0.305);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -21,7 +20,6 @@ nav .navergacion, nav .ciudades {
 }
 nav .div-menu .btn-menu {
   padding: 6px;
-  margin: 0;
   border: none;
   border-radius: 8px;
   display: flex;
@@ -46,11 +44,11 @@ header .div-detalles-banner {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  position: absolute;
   padding: 50px;
   color: #fff;
-  font-size: 1.1rem;
   border-radius: 20px;
+  position: absolute;
+  font-size: 1.1rem;
   max-width: 500px;
   opacity: 0;
   transition: all 0.3s ease-in-out;
@@ -71,7 +69,6 @@ header .div-btn-banner {
   align-items: center;
   gap: 15px;
   padding: 0 0 12px 0;
-  margin: 0;
   position: absolute;
   bottom: 0;
   opacity: 0;
@@ -79,18 +76,16 @@ header .div-btn-banner {
 }
 header .div-btn-banner .btn-comprar {
   padding: 10px 15px;
-  margin: 0;
   color: #fff;
+  background: linear-gradient(to right, #c62828, #7f0000);
   border: none;
   border-radius: 15px;
-  background: linear-gradient(to right, #c62828, #7f0000);
   font-size: 0.7rem;
   box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.493);
   transition: all 0.3s ease-in-out;
 }
 header .div-btn-banner .btn-trailer {
   padding: 10px 15px;
-  margin: 0;
   color: #fff;
   background-color: rgba(255, 255, 255, 0.064);
   border: none;
@@ -114,23 +109,29 @@ header:hover .div-btn-banner {
   opacity: 1;
 }
 
+main .section-cartelera, main .section-preventa, main .section-estrenos, main .section-promociones {
+  padding: 70px 30px 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: #fff;
+}
 main .section-acceso-rapido {
   padding: 30px;
-  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 30px;
-  color: white;
+  color: #fff;
 }
 main .section-acceso-rapido .div-tarjetas-acceso {
-  width: 100%;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   grid-auto-rows: 1fr;
   justify-items: center;
   gap: 30px;
+  width: 100%;
 }
 main .section-acceso-rapido .div-tarjetas-acceso .card-acceso {
   display: flex;
@@ -160,8 +161,8 @@ main .section-acceso-rapido .div-tarjetas-acceso .card-acceso div {
   position: absolute;
 }
 main .section-acceso-rapido .div-tarjetas-acceso .card-acceso div p {
-  font-size: 0.8rem;
   color: #D1D5DB;
+  font-size: 0.8rem;
 }
 main .section-acceso-rapido .div-tarjetas-acceso .card-acceso:hover {
   transform: scale(1.1);
@@ -182,29 +183,15 @@ main .section-acceso-rapido .div-tarjetas-acceso .carameleria {
 main .section-acceso-rapido .div-tarjetas-acceso .preventas {
   background: linear-gradient(60deg, rgba(251, 140, 0, 0.4039215686), rgba(230, 81, 0, 0.4039215686));
 }
-main .section-cartelera {
-  padding: 70px 30px 0 30px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: none;
-  align-items: none;
-  gap: 30px;
-  color: #fff;
-}
 main .section-cartelera .div-btn-categorias {
   display: flex;
   flex-direction: row;
-  justify-content: none;
-  align-items: none;
   gap: 10px;
   width: 100%;
 }
 main .section-cartelera .div-btn-categorias .btn-categorias {
   display: flex;
   flex-direction: row;
-  justify-content: none;
-  align-items: none;
   gap: 20px;
   overflow: hidden;
   overflow-x: auto;
@@ -212,7 +199,6 @@ main .section-cartelera .div-btn-categorias .btn-categorias {
 }
 main .section-cartelera .div-btn-categorias .btn-categorias button {
   padding: 10px 25px;
-  margin: 0;
   color: #fff;
   background-color: rgba(31, 41, 55, 0.5019607843);
   border-radius: 20px;
@@ -228,13 +214,10 @@ main .section-cartelera .div-btn-categorias .btn-categorias button:hover {
 main .section-cartelera .div-categorias .div-card-categorias .card-cartelera .card-filtro-hover .div-card-bottom .card-horarios {
   display: flex;
   flex-direction: row;
-  justify-content: none;
-  align-items: none;
   gap: 5px;
 }
 main .section-cartelera .div-categorias .div-card-categorias .card-cartelera .card-filtro-hover .div-card-bottom .card-horarios span {
   padding: 4px 8px;
-  margin: 0;
   background-color: rgba(75, 85, 99, 0.4235294118);
   border-radius: 10px;
   font-size: 0.7rem;
@@ -252,20 +235,9 @@ main .section-cartelera .div-categorias .div-card-categorias .card-cartelera:hov
 main .section-cartelera .div-ver-mas .btn-ver-mas {
   background: linear-gradient(to right, #c62828, #7f0000);
 }
-main .section-preventa {
-  display: flex;
-  flex-direction: column;
-  justify-content: none;
-  align-items: none;
-  gap: 30px;
-  color: #fff;
-  padding: 70px 30px 0 30px;
-  margin: 0;
-}
 main .section-preventa .div-categorias .div-card-categorias .card-cartelera .card-filtro-hover .div-card-bottom .div-estreno {
   display: flex;
   flex-direction: row;
-  justify-content: none;
   align-items: center;
   gap: 5px;
   font-size: 0.8rem;
@@ -276,8 +248,8 @@ main .section-preventa .div-categorias .div-card-categorias .card-cartelera .car
 }
 main .section-preventa .div-categorias .div-card-categorias .div-card-categoria-hover button {
   color: #000;
-  font-weight: bold;
   background: linear-gradient(60deg, #FFC107, #FF8F00);
+  font-weight: bold;
 }
 main .section-preventa .div-categorias .div-card-categorias .div-card-categoria-hover button:hover {
   background: linear-gradient(60deg, rgba(255, 193, 7, 0.8941176471), rgba(255, 143, 0, 0.8941176471));
@@ -285,38 +257,19 @@ main .section-preventa .div-categorias .div-card-categorias .div-card-categoria-
 main .section-preventa .div-categorias .div-card-categorias .card-cartelera:hover {
   box-shadow: 0px 0px 10px rgba(251, 191, 36, 0.7058823529);
 }
-main .section-preventa .div-mas-preventas {
+main .section-preventa .div-ver-mas {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  gap: 0;
 }
-main .section-preventa .div-mas-preventas .btn-ver-preventas {
-  font-weight: bold;
-  background: linear-gradient(60deg, #FFC107, #FF8F00);
+main .section-preventa .div-ver-mas .btn-ver-mas {
   color: #000;
-  padding: 15px;
-  border-radius: 20px;
-  transition: all 0.3s ease-in-out;
-}
-main .section-preventa .div-mas-preventas .btn-ver-preventas:hover {
-  transform: scale(1.1);
-}
-main .section-preventa .div-mas-preventas .btn-ver-preventas:active {
-  transform: scale(0.98);
-}
-main .section-estrenos {
-  display: flex;
-  flex-direction: column;
-  justify-content: none;
-  align-items: none;
-  gap: 30px;
-  color: #fff;
-  padding: 70px 30px 0 30px;
-  margin: 0;
+  background: linear-gradient(60deg, #FFC107, #FF8F00);
 }
 main .section-estrenos .div-categorias .div-card-categorias .card-cartelera .card-filtro-hover .div-card-bottom .div-estreno {
   display: flex;
   flex-direction: row;
-  justify-content: none;
   align-items: center;
   gap: 5px;
   font-size: 0.8rem;
@@ -331,33 +284,13 @@ main .section-estrenos .div-categorias .div-card-categorias .div-card-categoria-
 main .section-estrenos .div-categorias .div-card-categorias .card-cartelera:hover {
   box-shadow: 0px 0px 10px rgba(70, 130, 180, 0.7058823529);
 }
-main .section-estrenos .div-mas-estrenos {
-  display: flex;
-  justify-content: center;
-}
-main .section-estrenos .div-mas-estrenos .btn-ver-estrenos {
-  font-weight: bold;
+main .section-estrenos .div-ver-mas .btn-ver-mas {
   background: linear-gradient(60deg, #1976D2, #0D47A1);
-  color: #fff;
-  padding: 15px;
-  border-radius: 20px;
-  transition: all 0.3s ease-in-out;
-}
-main .section-estrenos .div-mas-estrenos .btn-ver-estrenos:hover {
-  transform: scale(1.1);
-}
-main .section-estrenos .div-mas-estrenos .btn-ver-estrenos:active {
-  transform: scale(0.98);
 }
 main .section-promociones {
   display: flex;
   flex-direction: column;
-  justify-content: none;
-  align-items: none;
   gap: 60px;
-  color: #fff;
-  padding: 70px 30px 0 30px;
-  margin: 0;
 }
 main .section-promociones .div-card-promos {
   display: grid;
@@ -371,44 +304,40 @@ main .section-promociones .div-card-promos .card-promos {
   justify-content: space-between;
   align-items: none;
   gap: 15px;
+  padding: 20px;
+  border-radius: 10px;
   box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238);
   position: relative;
   overflow: hidden;
-  padding: 20px;
-  border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
-main .section-promociones .div-card-promos .card-promos .circulo-derecho {
+main .section-promociones .div-card-promos .card-promos .circulo-derecho, main .section-promociones .div-card-promos .card-promos .circulo-izquierda {
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.1411764706);
   position: absolute;
+  width: 80px;
+  height: 80px;
+}
+main .section-promociones .div-card-promos .card-promos .circulo-derecho {
   top: -30px;
   right: -30px;
-  background-color: rgba(255, 255, 255, 0.1411764706);
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
 }
 main .section-promociones .div-card-promos .card-promos .circulo-izquierda {
-  position: absolute;
   bottom: -30px;
   left: -30px;
-  background-color: rgba(255, 255, 255, 0.1411764706);
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
 }
 main .section-promociones .div-card-promos .card-promos .descuentos {
   display: flex;
   flex-direction: column;
-  justify-content: none;
   align-items: flex-end;
   gap: 0;
   z-index: 1;
 }
 main .section-promociones .div-card-promos .card-promos .descuentos span {
-  background-color: rgba(210, 210, 210, 0.2588235294);
-  padding: 6px 12px;
-  font-size: 0.8rem;
   border-radius: 20px;
+  padding: 6px 12px;
+  background-color: rgba(210, 210, 210, 0.2588235294);
+  font-size: 0.8rem;
   box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238);
 }
 main .section-promociones .div-card-promos .card-promos .titulo-info-promo {
@@ -427,11 +356,11 @@ main .section-promociones .div-card-promos .card-promos .ver-detalles p {
   font-size: 0.8rem;
 }
 main .section-promociones .div-card-promos .card-promos .ver-detalles button {
+  color: #fff;
   background-color: rgba(210, 210, 210, 0.2588235294);
   padding: 10px;
   border-radius: 20px;
   box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238);
-  color: #fff;
   width: 100%;
   text-align: center;
   font-weight: bold;
@@ -454,7 +383,7 @@ main .section-promociones .div-card-promos .miercoles-para-ti {
 main .section-promociones .div-card-promos .adulto-mayor {
   background: linear-gradient(60deg, #FB8C00, #E65100);
 }
-main .section-promociones .div-ver-mas button {
+main .section-promociones .div-ver-mas .btn-ver-mas {
   color: #000;
   background-color: #fff;
 }
@@ -465,15 +394,12 @@ main .section-informacion {
   align-items: center;
   gap: 100px;
   color: #fff;
-  padding: 70px 30px;
-  margin: 0;
   background: linear-gradient(to bottom, #0f172a, #2a3139);
+  padding: 70px 30px;
 }
 main .section-informacion .div-descarga-app {
   display: flex;
   flex-direction: column;
-  justify-content: none;
-  align-items: none;
   gap: 30px;
 }
 main .section-informacion .div-descarga-app .div-descargas {
@@ -492,7 +418,6 @@ main .section-informacion .div-descarga-app .div-descargas a {
   color: #fff;
   background-color: #000;
   padding: 20px;
-  margin: 0;
   border-radius: 10px;
   box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238);
   width: 140px;
@@ -502,8 +427,8 @@ main .section-informacion .div-descarga-app .div-descargas a img {
   position: relative;
 }
 main .section-informacion .div-descarga-app .div-descargas a div .descarga-en {
-  font-size: 0.75rem;
   color: #9CA3AF;
+  font-size: 0.75rem;
 }
 main .section-informacion .div-descarga-app .div-descargas a div .descarga-store {
   font-weight: bold;
@@ -520,16 +445,15 @@ main .section-informacion .div-descarga-app .div-descargas a:active {
 main .section-informacion .div-descarga-app .lista-descarga-info {
   color: #9CA3AF;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
-  justify-content: center;
   font-size: 0.85rem;
 }
 main .section-informacion .div-suscribirse {
   display: flex;
   flex-direction: column;
-  justify-content: none;
-  align-items: none;
   gap: 30px;
 }
 main .section-informacion .div-suscribirse .div-suscribete-aqui {
@@ -538,21 +462,22 @@ main .section-informacion .div-suscribirse .div-suscribete-aqui {
   gap: 12px;
 }
 main .section-informacion .div-suscribirse .div-suscribete-aqui input {
-  padding: 16px;
-  border-radius: 8px;
+  color: #fff;
   background-color: rgba(0, 0, 0, 0.3215686275);
+  padding: 16px;
   border: 1px solid rgba(156, 163, 175, 0.3254901961);
+  border-radius: 8px;
 }
 main .section-informacion .div-suscribirse .div-suscribete-aqui button {
-  background: linear-gradient(to right, #ff7b7b, #d32f2f);
-  font-weight: bold;
   color: #fff;
+  background: linear-gradient(60deg, #c62828, #7f0000);
   padding: 16px;
   border-radius: 8px;
+  font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
 main .section-informacion .div-suscribirse .div-suscribete-aqui button:hover {
-  background: linear-gradient(to right, rgba(255, 123, 123, 0.8941176471), rgba(211, 47, 47, 0.8941176471));
+  background: linear-gradient(60deg, rgba(198, 40, 40, 0.8941176471), rgba(127, 0, 0, 0.8941176471));
   transform: scale(1.02);
 }
 main .section-informacion .div-suscribirse .div-suscribete-aqui button:active {
@@ -576,27 +501,22 @@ main .div-titulo p {
 main .div-categorias {
   display: flex;
   flex-direction: row;
-  justify-content: none;
-  align-items: none;
   gap: 10px;
   width: 100%;
 }
 main .div-categorias .div-card-categorias {
   display: flex;
   flex-direction: row;
-  justify-content: none;
-  align-items: none;
   gap: 30px;
+  padding: 20px;
   overflow: hidden;
   overflow-x: auto;
   width: 100%;
-  padding: 20px 20px;
 }
 main .div-categorias .div-card-categorias .card-cartelera {
   border-radius: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: none;
   align-items: center;
   gap: 0;
   overflow: hidden;
@@ -614,18 +534,13 @@ main .div-categorias .div-card-categorias .card-cartelera .card-filtro-hover {
 }
 main .div-categorias .div-card-categorias .card-cartelera .card-filtro-hover .div-card-bottom {
   padding: 15px;
-  margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: none;
-  align-items: none;
   gap: 5px;
 }
 main .div-categorias .div-card-categorias .card-cartelera .card-filtro-hover .div-card-bottom .card-duracion {
   display: flex;
   flex-direction: row;
-  justify-content: none;
-  align-items: none;
   gap: 4px;
   color: #9CA3AF;
   font-size: 0.8rem;
@@ -633,11 +548,8 @@ main .div-categorias .div-card-categorias .card-cartelera .card-filtro-hover .di
 main .div-categorias .div-card-categorias .div-card-categoria-hover {
   display: flex;
   flex-direction: column;
-  justify-content: none;
-  align-items: none;
   gap: 10px;
   padding: 15px;
-  margin: 0;
   position: absolute;
   opacity: 0;
   transition: all 0.3s ease-in-out;
@@ -650,7 +562,6 @@ main .div-categorias .div-card-categorias .div-card-categoria-hover p {
 main .div-categorias .div-card-categorias .div-card-categoria-hover button {
   color: #fff;
   padding: 10px;
-  margin: 0;
   border-radius: 15px;
   width: 100%;
 }
@@ -665,13 +576,15 @@ main .div-categorias .div-card-categorias .card-cartelera:hover .div-card-catego
 }
 main .div-ver-mas {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  gap: 0;
 }
 main .div-ver-mas .btn-ver-mas {
-  font-weight: bold;
   color: #fff;
   padding: 15px;
   border-radius: 20px;
+  font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
 main .div-ver-mas .btn-ver-mas:hover {
@@ -693,12 +606,12 @@ main .div-ver-mas .btn-ver-mas:active {
   }
 }
 footer {
-  background: linear-gradient(15deg, #723e7b 3%, #9b2352 97%);
-  color: #fff;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  color: #fff;
+  background: linear-gradient(15deg, #723e7b 3%, #9b2352 97%);
+  padding: 20px;
 }
 footer .section-top {
   display: flex;
@@ -707,6 +620,7 @@ footer .section-top {
 }
 footer .section-top .div-logo {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 20px;
 }
@@ -729,22 +643,26 @@ footer .section-descarga {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  padding: 20px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.2549019608);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2549019608);
-  padding: 20px 0;
 }
 footer .section-descarga .titulo-descarga {
   text-align: center;
 }
+footer .section-descarga .titulo-descarga p {
+  font-size: 0.85rem;
+}
 footer .section-descarga .btn-descarga-footer {
   display: flex;
+  flex-direction: row;
   gap: 20px;
 }
 footer .section-descarga .btn-descarga-footer a {
   background-color: #000;
   padding: 15px 30px;
+  border: 0;
   border-radius: 10px;
-  width: 90px;
   box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.238);
 }
 footer .section-descarga .btn-descarga-footer a .descarga {
@@ -759,17 +677,18 @@ footer .section-descarga .btn-descarga-footer a:hover {
 footer .section-terminos {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   align-items: center;
+  gap: 20px;
   font-size: 0.8rem;
 }
 footer .section-terminos .div-terminos {
   display: flex;
-  gap: 5px;
   flex-direction: column;
+  gap: 4px;
 }
 footer .section-terminos .redes {
   display: flex;
+  flex-direction: row;
   gap: 20px;
 }
 
@@ -802,7 +721,6 @@ footer .section-terminos .redes {
     color: #fff;
     background-color: #dc2626;
     padding: 6px 30px 6px 8px;
-    margin: 0;
     border: none;
     border-radius: 15px;
     cursor: pointer;
@@ -832,6 +750,7 @@ footer .section-terminos .redes {
 }
 @media only screen and (min-width: 992px) {
   header {
+    padding: 0;
     margin: 50px 50px 0 50px;
     border-radius: 20px;
     overflow: hidden;
@@ -839,7 +758,11 @@ footer .section-terminos .redes {
 }
 @media only screen and (min-width: 600px) {
   main .section-acceso-rapido .div-tarjetas-acceso {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    justify-items: center;
+    gap: 30px;
   }
   main .section-informacion .div-descarga-app .div-descargas {
     display: flex;
@@ -859,18 +782,28 @@ footer .section-terminos .redes {
     padding: 16px 80px;
   }
   main .section-promociones .div-card-promos {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 30px;
   }
 }
 @media only screen and (min-width: 992px) {
   main .section-acceso-rapido .div-tarjetas-acceso {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    justify-items: center;
+    gap: 30px;
   }
   main .div-categorias .div-card-categorias .card-cartelera {
     width: 250px;
   }
   main .section-promociones .div-card-promos {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 30px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -880,21 +813,32 @@ footer .section-terminos .redes {
     gap: 40px;
   }
   footer .section-top .div-logo {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 20px;
     text-align: center;
   }
 }
 @media only screen and (min-width: 992px) {
   footer .section-top .div-navegacion {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
   footer .section-descarga {
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+    gap: 20px;
   }
   footer .section-terminos {
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
     padding: 20px;
   }
 }

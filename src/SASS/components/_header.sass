@@ -2,15 +2,12 @@ header
   @include flex(row, center, center)
   position: relative
   .div-detalles-banner
-    display: flex
-    flex-direction: column
-    align-items: center
-    gap: 10px
+    @include flex(column, null, center, 10px)
+    @include espaciado(50px, null)
+    @include aplicar-colores(#fff, null, null)
+    @include border(null, 20px)
     position: absolute
-    padding: 50px
-    color: #fff
     font-size: 1.1rem
-    border-radius: 20px
     max-width: 500px
     opacity: 0
     transition: all 0.3s ease-in-out
@@ -18,28 +15,27 @@ header
       text-align: center
     div
       span
-        padding: 6px
-        border-radius: 10px
-        background-color: #4b55636c
+        @include espaciado(6px, null)
+        @include border(null, 10px)
+        @include aplicar-colores(null, #4b55636c, null)
         font-size: 0.8rem
   .div-btn-banner
     @include flex(row, center, center, 15px)
-    @include espaciado(0 0 12px 0, 0)
+    @include espaciado(0 0 12px 0, null)
     position: absolute
     bottom: 0
     opacity: 0
     transition: all 0.5s ease-in-out
     .btn-comprar
-      @include espaciado(10px 15px, 0)
-      @include aplicar-colores(#fff, null)
+      @include espaciado(10px 15px, null)
+      @include aplicar-colores(#fff, null, linear-gradient(to right, #c62828, #7f0000))
       @include border(none, 15px)
-      background: linear-gradient(to right, #c62828, #7f0000)
       font-size: .7rem
       box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.493)
       transition: all 0.3s ease-in-out
     .btn-trailer
-      @include espaciado(10px 15px, 0)
-      @include aplicar-colores(#fff, rgba(255, 255, 255, 0.064))
+      @include espaciado(10px 15px, null)
+      @include aplicar-colores(#fff, rgba(255, 255, 255, 0.064), null)
       @include border(none, 15px)
       font-size: .7rem
       box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.493)
