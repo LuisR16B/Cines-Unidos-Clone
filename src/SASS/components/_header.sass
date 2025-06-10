@@ -1,6 +1,33 @@
 header
   @include flex(row, center, center)
+  @include espaciado(30px 0, null)
+  @include aplicar-colores(null, var(--color-primario), null)
   position: relative
+  .div-izquierda, .div-derecha
+    @include aplicar-colores(null, #00000023, null)
+    @include border(null, 100%)
+    z-index: 2
+    position: absolute
+    box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.262)
+    width: 100px
+    height: 100px
+  .div-izquierda
+    top: -50px
+    left: -50px
+  .div-derecha
+    bottom: -50px
+    right: -50px
+  .publicidad
+    @include aplicar-colores(var(--color-primario), null, linear-gradient(15deg, #723e7b 3%, #9b2352 97%))
+    @include espaciado(15px, 40px 20px)
+    @include border(null, var(--border-radius-secundario))
+    display: none
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 2
+    box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.493)
+    transform: rotate(20deg)
   .div-detalles-banner
     @include flex(column, null, center, 10px)
     @include espaciado(50px, null)
@@ -24,7 +51,6 @@ header
     @include espaciado(0 0 12px 0, null)
     position: absolute
     bottom: 0
-    opacity: 0
     transition: all 0.5s ease-in-out
     .btn-comprar
       @include espaciado(10px 15px, null)
@@ -35,7 +61,7 @@ header
       transition: all 0.3s ease-in-out
     .btn-trailer
       @include espaciado(10px 15px, null)
-      @include aplicar-colores(var(--color-primario), rgba(255, 255, 255, 0.064), null)
+      @include aplicar-colores(var(--color-primario), null, var(--gradiente-azul))
       @include border(none, 15px)
       font-size: .7rem
       box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.493)
@@ -44,10 +70,10 @@ header
       transform: scale(1.1)
     .btn-comprar:active , .btn-trailer:active
       transform: scale(0.98)
-
-header:hover
-  img
-    filter: opacity(0.5)
-    transition: all 0.5s ease-in-out
-  .div-btn-banner
-    opacity: 1
+@keyframes movimiento-deg
+  0%
+    transform: rotate(20deg)
+  50%
+    transform: rotate(25deg)
+  100%
+    transform: rotate(20deg)

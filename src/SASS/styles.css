@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 nav {
   display: flex;
   flex-direction: row;
@@ -37,7 +36,40 @@ header {
   justify-content: center;
   align-items: center;
   gap: 0;
+  padding: 30px 0;
+  background-color: var(--color-primario);
   position: relative;
+}
+header .div-izquierda, header .div-derecha {
+  background-color: rgba(0, 0, 0, 0.137254902);
+  border-radius: 100%;
+  z-index: 2;
+  position: absolute;
+  box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.262);
+  width: 100px;
+  height: 100px;
+}
+header .div-izquierda {
+  top: -50px;
+  left: -50px;
+}
+header .div-derecha {
+  bottom: -50px;
+  right: -50px;
+}
+header .publicidad {
+  color: var(--color-primario);
+  background: linear-gradient(15deg, #723e7b 3%, #9b2352 97%);
+  padding: 15px;
+  margin: 40px 20px;
+  border-radius: var(--border-radius-secundario);
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.493);
+  transform: rotate(20deg);
 }
 header .div-detalles-banner {
   display: flex;
@@ -71,7 +103,6 @@ header .div-btn-banner {
   padding: 0 0 12px 0;
   position: absolute;
   bottom: 0;
-  opacity: 0;
   transition: all 0.5s ease-in-out;
 }
 header .div-btn-banner .btn-comprar {
@@ -87,7 +118,7 @@ header .div-btn-banner .btn-comprar {
 header .div-btn-banner .btn-trailer {
   padding: 10px 15px;
   color: var(--color-primario);
-  background-color: rgba(255, 255, 255, 0.064);
+  background: var(--gradiente-azul);
   border: none;
   border-radius: 15px;
   font-size: 0.7rem;
@@ -101,14 +132,17 @@ header .div-btn-banner .btn-comprar:active, header .div-btn-banner .btn-trailer:
   transform: scale(0.98);
 }
 
-header:hover img {
-  filter: opacity(0.5);
-  transition: all 0.5s ease-in-out;
+@keyframes movimiento-deg {
+  0% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
 }
-header:hover .div-btn-banner {
-  opacity: 1;
-}
-
 main .section-acceso-rapido, main .section-cartelera, main .section-preventa, main .section-estrenos, main .section-promociones {
   padding: 70px 30px 0 30px;
   display: flex;
@@ -726,7 +760,7 @@ footer .section-terminos .redes {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 0;
+    gap: 20px;
   }
   nav .ciudades select {
     color: var(--color-primario);
@@ -755,16 +789,40 @@ footer .section-terminos .redes {
   }
 }
 @media only screen and (min-width: 768px) {
-  header:hover .div-detalles-banner {
-    opacity: 1;
-  }
-}
-@media only screen and (min-width: 992px) {
   header {
     padding: 0;
     margin: 50px 50px 0 50px;
     border-radius: var(--border-radius-primario);
     overflow: hidden;
+  }
+  header .div-btn-banner .btn-comprar, header .div-btn-banner .btn-trailer {
+    font-size: 1rem;
+  }
+  header .div-izquierda, header .div-derecha {
+    width: 150px;
+    height: 150px;
+  }
+  header .div-izquierda {
+    top: -75px;
+    left: -75px;
+  }
+  header .div-derecha {
+    bottom: -75px;
+    right: -75px;
+  }
+  header:hover .div-detalles-banner {
+    opacity: 1;
+  }
+  header:hover img {
+    filter: brightness(0.5);
+  }
+  header:hover .publicidad {
+    animation: movimiento-deg 1.5s infinite alternate ease-in-out;
+  }
+}
+@media only screen and (min-width: 992px) {
+  header .publicidad {
+    display: block;
   }
 }
 @media only screen and (min-width: 600px) {
@@ -871,7 +929,7 @@ footer .section-terminos .redes {
 * {
   padding: 0;
   margin: 0;
-  font-family: "Outfit", sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-seri;
 }
 
 body {
