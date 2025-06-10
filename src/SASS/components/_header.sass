@@ -1,25 +1,13 @@
 header
-  @include flex(row, center, center)
-  @include espaciado(30px 0, null)
+  @include flex(row, flex-end, center)
   @include aplicar-colores(null, var(--color-primario), null)
   position: relative
-  .div-izquierda, .div-derecha
-    @include aplicar-colores(null, #00000023, null)
-    @include border(null, 100%)
-    z-index: 2
-    position: absolute
-    box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.262)
-    width: 100px
-    height: 100px
-  .div-izquierda
-    top: -50px
-    left: -50px
-  .div-derecha
-    bottom: -50px
-    right: -50px
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.636)
+  img
+    filter: brightness(0.7)
   .publicidad
-    @include aplicar-colores(var(--color-primario), null, linear-gradient(15deg, #723e7b 3%, #9b2352 97%))
-    @include espaciado(15px, 40px 20px)
+    @include aplicar-colores(var(--color-primario), null, linear-gradient(15deg, #723e7b88 3%, #9b235188 97%))
+    @include espaciado(10px, 35px 15px)
     @include border(null, var(--border-radius-secundario))
     display: none
     position: absolute
@@ -28,48 +16,42 @@ header
     z-index: 2
     box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.493)
     transform: rotate(20deg)
+    font-size: .8rem
   .div-detalles-banner
     @include flex(column, null, center, 10px)
-    @include espaciado(50px, null)
-    @include aplicar-colores(var(--color-primario), null, null)
+    @include aplicar-colores(var(--color-secundario), null, null)
     @include border(null, var(--border-radius-primario))
+    @include espaciado(0 32px 0 0,null)
     position: absolute
-    font-size: 1.1rem
-    max-width: 500px
-    opacity: 0
+    font-size: 1.2rem
+    opacity: 1
     transition: all 0.3s ease-in-out
-    p
-      text-align: center
-    div
+    .titulo
+      width: 180px
+    .horarios-banner
+      display: none
       span
         @include espaciado(6px, null)
         @include border(null, var(--border-radius-secundario))
-        @include aplicar-colores(null, #4b55636c, null)
-        font-size: 0.8rem
-  .div-btn-banner
-    @include flex(row, center, center, 15px)
-    @include espaciado(0 0 12px 0, null)
-    position: absolute
-    bottom: 0
-    transition: all 0.5s ease-in-out
-    .btn-comprar
-      @include espaciado(10px 15px, null)
-      @include aplicar-colores(var(--color-primario), null, var(--gradiente-rojo))
-      @include border(none, 15px)
-      font-size: .7rem
-      box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.493)
-      transition: all 0.3s ease-in-out
-    .btn-trailer
-      @include espaciado(10px 15px, null)
-      @include aplicar-colores(var(--color-primario), null, var(--gradiente-azul))
-      @include border(none, 15px)
-      font-size: .7rem
-      box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.493)
-      transition: all 0.3s ease-in-out
-    .btn-comprar:hover, .btn-trailer:hover
-      transform: scale(1.1)
-    .btn-comprar:active , .btn-trailer:active
-      transform: scale(0.98)
+        @include aplicar-colores(var(--color-primario), #4b556397, null)
+        font-size: .8rem
+    .banner-btn
+      @include flex(row, null, center, 15px)
+      .comprar-boleto, .trailer
+        @include aplicar-colores(var(--color-primario), null, null)
+        @include espaciado(8px, null)
+        @include border(null, var(--border-radius-primario))
+        font-size: .6rem
+        transition: all 0.3s ease-in-out
+      .comprar-boleto
+        @include aplicar-colores(null, null, var(--gradiente-rojo))
+      .trailer
+        @include aplicar-colores(null, null, var(--gradiente-azul))
+      .comprar-boleto:hover, .trailer:hover
+        transform: scale(1.1)
+      .comprar-boleto:active, .trailer:active
+        transform: scale(0.98)
+
 @keyframes movimiento-deg
   0%
     transform: rotate(20deg)

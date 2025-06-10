@@ -1,31 +1,54 @@
+@media only screen and (min-width: 600px)
+  header
+    .div-detalles-banner
+      @include espaciado(0 50px 0 0, null)
+      .horarios-banner
+        @include flex(row, null, center, 8px)
+      .titulo
+        width: 270px
+      .banner-btn
+        .comprar-boleto, .trailer
+          @include espaciado(10px, null)
+          font-size: .8rem
+
 @media only screen and (min-width: 768px)
   header
     @include espaciado(0, 50px 50px 0 50px)
     @include border(null, var(--border-radius-primario))
     overflow: hidden
-    .div-btn-banner
-      .btn-comprar, .btn-trailer
-        font-size: 1rem
-    .div-izquierda, .div-derecha
-      width: 150px
-      height: 150px
-    .div-izquierda
-      top: -75px
-      left: -75px
-    .div-derecha
-      bottom: -75px
-      right: -75px
-  header:hover
     .div-detalles-banner
-      opacity: 1
-    img
-      filter: brightness(0.5)
+      @include espaciado(0 70px 0 0, null)
+      .titulo
+        width: 300px
+  header:hover
     .publicidad
       animation: movimiento-deg 1.5s infinite alternate ease-in-out
 
 
 @media only screen and (min-width: 992px)
   header
+    .div-detalles-banner
+      @include espaciado(0 120px 0 0, null)
+      .titulo
+        width: 350px
+      .banner-btn
+        .comprar-boleto, .trailer
+          @include espaciado(12px, null)
+          font-size: .9rem
     .publicidad
       display: block
 
+@media only screen and (min-width: 1200px)
+  header
+    .div-detalles-banner
+      @include flex(column, null, center, 20px)
+      @include espaciado(0 160px 0 0, null)
+      .horarios-banner
+        span
+          font-size: 1rem
+      .titulo
+        width: 450px
+      .banner-btn
+        .comprar-boleto, .trailer
+          @include espaciado(12px, null)
+          font-size: 1rem

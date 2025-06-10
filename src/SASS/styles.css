@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 nav {
   display: flex;
   flex-direction: row;
@@ -33,35 +34,21 @@ nav .div-menu .btn-menu {
 header {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 0;
-  padding: 30px 0;
   background-color: var(--color-primario);
   position: relative;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.636);
 }
-header .div-izquierda, header .div-derecha {
-  background-color: rgba(0, 0, 0, 0.137254902);
-  border-radius: 100%;
-  z-index: 2;
-  position: absolute;
-  box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.262);
-  width: 100px;
-  height: 100px;
-}
-header .div-izquierda {
-  top: -50px;
-  left: -50px;
-}
-header .div-derecha {
-  bottom: -50px;
-  right: -50px;
+header img {
+  filter: brightness(0.7);
 }
 header .publicidad {
   color: var(--color-primario);
-  background: linear-gradient(15deg, #723e7b 3%, #9b2352 97%);
-  padding: 15px;
-  margin: 40px 20px;
+  background: linear-gradient(15deg, rgba(114, 62, 123, 0.5333333333) 3%, rgba(155, 35, 81, 0.5333333333) 97%);
+  padding: 10px;
+  margin: 35px 15px;
   border-radius: var(--border-radius-secundario);
   display: none;
   position: absolute;
@@ -70,65 +57,57 @@ header .publicidad {
   z-index: 2;
   box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.493);
   transform: rotate(20deg);
+  font-size: 0.8rem;
 }
 header .div-detalles-banner {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  padding: 50px;
-  color: var(--color-primario);
+  color: var(--color-secundario);
   border-radius: var(--border-radius-primario);
+  padding: 0 32px 0 0;
   position: absolute;
-  font-size: 1.1rem;
-  max-width: 500px;
-  opacity: 0;
+  font-size: 1.2rem;
+  opacity: 1;
   transition: all 0.3s ease-in-out;
 }
-header .div-detalles-banner p {
-  text-align: center;
+header .div-detalles-banner .titulo {
+  width: 180px;
 }
-header .div-detalles-banner div span {
+header .div-detalles-banner .horarios-banner {
+  display: none;
+}
+header .div-detalles-banner .horarios-banner span {
   padding: 6px;
   border-radius: var(--border-radius-secundario);
-  background-color: rgba(75, 85, 99, 0.4235294118);
+  color: var(--color-primario);
+  background-color: rgba(75, 85, 99, 0.5921568627);
   font-size: 0.8rem;
 }
-header .div-btn-banner {
+header .div-detalles-banner .banner-btn {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   gap: 15px;
-  padding: 0 0 12px 0;
-  position: absolute;
-  bottom: 0;
-  transition: all 0.5s ease-in-out;
 }
-header .div-btn-banner .btn-comprar {
-  padding: 10px 15px;
+header .div-detalles-banner .banner-btn .comprar-boleto, header .div-detalles-banner .banner-btn .trailer {
   color: var(--color-primario);
+  padding: 8px;
+  border-radius: var(--border-radius-primario);
+  font-size: 0.6rem;
+  transition: all 0.3s ease-in-out;
+}
+header .div-detalles-banner .banner-btn .comprar-boleto {
   background: var(--gradiente-rojo);
-  border: none;
-  border-radius: 15px;
-  font-size: 0.7rem;
-  box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.493);
-  transition: all 0.3s ease-in-out;
 }
-header .div-btn-banner .btn-trailer {
-  padding: 10px 15px;
-  color: var(--color-primario);
+header .div-detalles-banner .banner-btn .trailer {
   background: var(--gradiente-azul);
-  border: none;
-  border-radius: 15px;
-  font-size: 0.7rem;
-  box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.493);
-  transition: all 0.3s ease-in-out;
 }
-header .div-btn-banner .btn-comprar:hover, header .div-btn-banner .btn-trailer:hover {
+header .div-detalles-banner .banner-btn .comprar-boleto:hover, header .div-detalles-banner .banner-btn .trailer:hover {
   transform: scale(1.1);
 }
-header .div-btn-banner .btn-comprar:active, header .div-btn-banner .btn-trailer:active {
+header .div-detalles-banner .banner-btn .comprar-boleto:active, header .div-detalles-banner .banner-btn .trailer:active {
   transform: scale(0.98);
 }
 
@@ -788,6 +767,24 @@ footer .section-terminos .redes {
     display: none;
   }
 }
+@media only screen and (min-width: 600px) {
+  header .div-detalles-banner {
+    padding: 0 50px 0 0;
+  }
+  header .div-detalles-banner .horarios-banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+  header .div-detalles-banner .titulo {
+    width: 270px;
+  }
+  header .div-detalles-banner .banner-btn .comprar-boleto, header .div-detalles-banner .banner-btn .trailer {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+}
 @media only screen and (min-width: 768px) {
   header {
     padding: 0;
@@ -795,34 +792,48 @@ footer .section-terminos .redes {
     border-radius: var(--border-radius-primario);
     overflow: hidden;
   }
-  header .div-btn-banner .btn-comprar, header .div-btn-banner .btn-trailer {
-    font-size: 1rem;
+  header .div-detalles-banner {
+    padding: 0 70px 0 0;
   }
-  header .div-izquierda, header .div-derecha {
-    width: 150px;
-    height: 150px;
-  }
-  header .div-izquierda {
-    top: -75px;
-    left: -75px;
-  }
-  header .div-derecha {
-    bottom: -75px;
-    right: -75px;
-  }
-  header:hover .div-detalles-banner {
-    opacity: 1;
-  }
-  header:hover img {
-    filter: brightness(0.5);
+  header .div-detalles-banner .titulo {
+    width: 300px;
   }
   header:hover .publicidad {
     animation: movimiento-deg 1.5s infinite alternate ease-in-out;
   }
 }
 @media only screen and (min-width: 992px) {
+  header .div-detalles-banner {
+    padding: 0 120px 0 0;
+  }
+  header .div-detalles-banner .titulo {
+    width: 350px;
+  }
+  header .div-detalles-banner .banner-btn .comprar-boleto, header .div-detalles-banner .banner-btn .trailer {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
   header .publicidad {
     display: block;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  header .div-detalles-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 160px 0 0;
+  }
+  header .div-detalles-banner .horarios-banner span {
+    font-size: 1rem;
+  }
+  header .div-detalles-banner .titulo {
+    width: 450px;
+  }
+  header .div-detalles-banner .banner-btn .comprar-boleto, header .div-detalles-banner .banner-btn .trailer {
+    padding: 12px;
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 600px) {
