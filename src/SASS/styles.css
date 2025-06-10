@@ -1,4 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@keyframes movimiento-deg {
+  0% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+@keyframes salto {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes saltoaccesorapido {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(4deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
 nav {
   display: flex;
   flex-direction: row;
@@ -39,14 +72,11 @@ header {
   gap: 0;
   background-color: var(--color-primario);
   position: relative;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.636);
-}
-header img {
-  filter: brightness(0.7);
+  box-shadow: 4px 10px 20px rgba(255, 255, 255, 0.308);
 }
 header .publicidad {
   color: var(--color-primario);
-  background: linear-gradient(15deg, rgba(114, 62, 123, 0.5333333333) 3%, rgba(155, 35, 81, 0.5333333333) 97%);
+  background: linear-gradient(15deg, rgba(114, 62, 123, 0.6235294118) 3%, rgba(155, 35, 81, 0.6235294118) 97%);
   padding: 10px;
   margin: 35px 15px;
   border-radius: var(--border-radius-secundario);
@@ -111,17 +141,6 @@ header .div-detalles-banner .banner-btn .comprar-boleto:active, header .div-deta
   transform: scale(0.98);
 }
 
-@keyframes movimiento-deg {
-  0% {
-    transform: rotate(20deg);
-  }
-  50% {
-    transform: rotate(25deg);
-  }
-  100% {
-    transform: rotate(20deg);
-  }
-}
 main .section-acceso-rapido, main .section-cartelera, main .section-preventa, main .section-estrenos, main .section-promociones {
   padding: 70px 30px 0 30px;
   display: flex;
@@ -607,28 +626,6 @@ main .div-ver-mas .btn-ver-mas:active {
   transform: scale(0.98);
 }
 
-@keyframes salto {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes saltoaccesorapido {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-5px) rotate(4deg);
-  }
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-}
 footer {
   display: flex;
   flex-direction: column;

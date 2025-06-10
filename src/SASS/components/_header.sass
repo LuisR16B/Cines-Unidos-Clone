@@ -2,11 +2,9 @@ header
   @include flex(row, flex-end, center)
   @include aplicar-colores(null, var(--color-primario), null)
   position: relative
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.636)
-  img
-    filter: brightness(0.7)
+  box-shadow: 4px 10px 20px rgba(255, 255, 255, 0.308)
   .publicidad
-    @include aplicar-colores(var(--color-primario), null, linear-gradient(15deg, #723e7b88 3%, #9b235188 97%))
+    @include aplicar-colores(var(--color-primario), null, linear-gradient(15deg, #723e7b9f 3%, #9b23519f 97%))
     @include espaciado(10px, 35px 15px)
     @include border(null, var(--border-radius-secundario))
     display: none
@@ -52,10 +50,3 @@ header
       .comprar-boleto:active, .trailer:active
         transform: scale(0.98)
 
-@keyframes movimiento-deg
-  0%
-    transform: rotate(20deg)
-  50%
-    transform: rotate(25deg)
-  100%
-    transform: rotate(20deg)

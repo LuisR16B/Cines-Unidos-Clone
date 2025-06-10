@@ -38,3 +38,25 @@
     border: $border
   @if $border-radius != null
     border-radius: $border-radius
+
+@keyframes movimiento-deg
+  0%
+    transform: rotate(20deg)
+  50%
+    transform: rotate(25deg)
+  100%
+    transform: rotate(20deg)
+@keyframes salto
+  0%
+    transform: translateY(0)
+  50%
+    transform: translateY(-5px)
+  100%
+    transform: translateY(0)
+@keyframes saltoaccesorapido
+  0%
+    transform: translateY(0) rotate(0deg)
+  50%
+    transform: translateY(-5px) rotate(4deg)
+  100%
+    transform: translateY(0) rotate(0deg)
