@@ -214,7 +214,7 @@ main .section-acceso-rapido .div-tarjetas-acceso .carameleria {
   background: linear-gradient(to right, rgba(255, 193, 7, 0.4039215686), rgba(255, 143, 0, 0.4039215686));
 }
 main .section-acceso-rapido .div-tarjetas-acceso .preventas {
-  background: linear-gradient(to right, rgba(251, 140, 0, 0.4039215686), rgba(230, 81, 0, 0.4039215686));
+  background: linear-gradient(to right, rgba(77, 208, 225, 0.4039215686), rgba(0, 151, 167, 0.4039215686));
 }
 main .section-cartelera .div-btn-categorias {
   display: flex;
@@ -738,6 +738,9 @@ footer .section-terminos .redes {
     align-items: center;
     gap: 20px;
   }
+  nav .ciudades img {
+    cursor: pointer;
+  }
   nav .ciudades select {
     color: var(--color-primario);
     background-color: #c62828;
@@ -929,7 +932,7 @@ footer .section-terminos .redes {
   --gradiente-azul-trasparente: linear-gradient(to right, #1976D2e4, #0D47A1e4);
   --gradiente-amarillo: linear-gradient(to right, #FFC107, #FF8F00);
   --gradiente-amarillo-transparente: linear-gradient(to right, #FFC107e4, #FF8F00e4);
-  --gradiente-naranja: linear-gradient(to right, #FB8C00, #E65100);
+  --gradiente-naranja: linear-gradient(to right, #4DD0E1, #0097A7);
   --border-radius-primario: 20px;
   --border-radius-secundario: 10px;
 }
@@ -938,6 +941,7 @@ footer .section-terminos .redes {
   padding: 0;
   margin: 0;
   font-family: "Inter", system-ui, -apple-system, sans-seri;
+  cursor: default;
 }
 
 body {
